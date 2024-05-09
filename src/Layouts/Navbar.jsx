@@ -22,7 +22,7 @@ export default function Navbar() {
         <Button2 btn2="Book a Call" />
         <Button1 btn1="SignUp" />
       </div>
-      <div className='text-2xl ml-auto' onClick={()=>setOpen(!open)}>
+      <div className='text-2xl ml-auto md:hidden' onClick={()=>setOpen(!open)}>
           {open ?  <IoReorderThreeOutline /> : <IoCloseSharp/> }
       </div>
       {/* res navbar */}
