@@ -4,6 +4,7 @@ import Button1 from '../Components/Button1';
 import Button2 from '../Components/Button2';
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { IoCloseSharp } from "react-icons/io5";
+import {Link} from "react-router-dom"
 export default function Navbar() {
   const [open,setOpen]=useState(true);
   return (
@@ -13,10 +14,10 @@ export default function Navbar() {
      <div className="logo"><img src={logo} alt="logo" /></div>
     
       <ul className='hidden md:flex flex-col md:flex-row gap-4 ml-10 '>
-                    <li><a className='font-medium text-sm' href="/b2bdatabase">Why Leadbud</a></li>
-                    <li><a className='font-medium text-sm' href="/emailfinder">Solutions</a></li>
-                    <li><a className='font-medium text-sm' href="/emailverify">Resources</a></li>
-                    <li><a className='font-medium text-sm' href="/findemail">Placing</a></li>
+                    <li><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link></li>
+                    <li><Link className='font-medium text-sm' to="/emailfinder">Solutions</Link></li>
+                    <li><Link className='font-medium text-sm' to="/emailverify">Resources</Link></li>
+                    <li><Link className='font-medium text-sm' to="/findemail">Placing</Link></li>
       </ul>
       <div className='hidden md:flex flex-col md:flex-row ml-auto gap-3'>
         <Button2 btn2="Book a Call" />
@@ -29,10 +30,10 @@ export default function Navbar() {
       {
         open ? null : <div className='flex flex-col absolute left-0 p-3 bg-bgmain w-[100%] top-10  md:hidden'>
         <ul className='flex flex-col gap-3 mx-auto text-center'>
-                      <li><a className='font-medium text-sm' href="/b2bdatabase">Why Leadbud</a></li>
-                      <li><a className='font-medium text-sm' href="/emailfinder">Solutions</a></li>
-                      <li><a className='font-medium text-sm' href="/emailverify">Resources</a></li>
-                      <li><a className='font-medium text-sm' href="/findemail">Placing</a></li>
+                      <li><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link></li>
+                      <li><Link className='font-medium text-sm' to="/emailfinder">Solutions</Link></li>
+                      <li><Link className='font-medium text-sm' to="/emailverify">Resources</Link></li>
+                      <li><Link className='font-medium text-sm' to="/findemail">Placing</Link></li>
         </ul>
         <div className='flex flex-col gap-3 text-center mt-3'>
           <Button2 btn2="Book a Call" />
