@@ -43,7 +43,7 @@ export default function B2bdatabase() {
       </ul>
     </div>
     </section>
-    <div className='lg:w-3/4 container mx-auto py-10 sm:mt-[-100px] md:mt-[-200px]'>
+    <div className='lg:w-3/4 container mx-auto py-10 md:mt-[-200px]'>
       <img src={HomeImg} alt="" />
     </div>
     {/* Strategy starts here */}

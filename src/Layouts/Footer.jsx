@@ -15,9 +15,9 @@ export default function Footer() {
   return (
     <div className='bg-[#030621] '>
       <div className='container pt-10 md:pt-16'>
-      <div className='flex flex-col text-center items-center gap-3'>
+      <div className='flex flex-col sm:flex-row text-center items-center gap-3'>
       <img className='w-[50%] sm:w-auto' src={Logo} alt="" />
-      <ul className='flex flex-col md:flex-row text-white gap-3 md:gap-5 md:ml-10 text-sm'>
+      <ul className='flex flex-row text-white gap-3 md:gap-5 md:ml-10 text-sm'>
         <li><a href="/">Home</a></li>
         <li><a href="/">Feature</a></li>
         <li><a href="/">Pricing</a></li>
@@ -31,7 +31,7 @@ export default function Footer() {
       </div>
       </div>
       <hr className='my-10 text-para h-[2px]' />
-      <div className='grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 text-center justify-between text-white '>
+      <div className='grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 text-center sm:text-start justify-between text-white '>
         <div> <h3 className='text-lg font-semibold '>Tools</h3> <ul className='flex flex-col mt-1 md:mt-5 text-para font-medium text-sm'><li><a href="/">Leadbud</a></li></ul></div>
         <div> 
             <h3 className='text-lg font-semibold '>Leadbud</h3> 
