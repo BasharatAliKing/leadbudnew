@@ -36,10 +36,10 @@ export default function B2bdatabase() {
     <div className='text-center'><Heading1 heading1="Unlock the Power of Our B2B Database" /></div>
      <Heading2 heading2="50M Companies & 500M Contacts" />
       <Button1 btn1="Try free B2B Database" />
-      <ul className='flex flex-wrap gap-5'>
-        <li className='flex items-center font-medium gap-1'><HiMiniCheckBadge /> Real-time email verifications</li>
-        <li className='flex items-center font-medium gap-1'><HiMiniCheckBadge /> More than 15 filtering options</li>
-        <li className='flex items-center font-medium gap-1'><HiMiniCheckBadge /> New Load Alerts</li>
+      <ul className='flex flex-wrap gap-3 md:gap-5'>
+        <li className='flex items-center mx-auto sm:mx-0 font-medium gap-1'><HiMiniCheckBadge /> Real-time email verifications</li>
+        <li className='flex items-center mx-auto sm:mx-0 font-medium gap-1'><HiMiniCheckBadge /> More than 15 filtering options</li>
+        <li className='flex items-center mx-auto sm:mx-0 font-medium gap-1'><HiMiniCheckBadge /> New Load Alerts</li>
       </ul>
     </div>
     </section>
