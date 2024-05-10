@@ -21,6 +21,26 @@ export default function Emailverify() {
     {img:Img2 , title:"Domain Verification", des:"Ensure emails are linked to valid domains, enhancing the reliability of your communication channels."},
     {img:Img3 , title:"Anti-Spam Checks", des:"Boost deliverability by avoiding spam traps, safeguarding your emails from being flagged as spam."},
   ]
+  let GeneralEmail=[
+    {ques:"Full Name", ans:"ABCD"},
+    {ques:"Gender", ans:"Male"},
+    {ques:"State", ans:"Deliverable"},
+    {ques:"Reason", ans:"Acceptable"},
+    {ques:"Domain", ans:"xyz.com"},
+    {ques:"User", ans:"XYZ."},
+    {ques:"Did you Mean ?", ans:"Did you Mean ?"},
+  ]
+  let Attributes=[
+    {ques:"Accept-all", ans:"No"},
+    {ques:"Accept-all", ans:"No"},
+    {ques:"Accept-all", ans:"No"},
+    {ques:"Accept-all", ans:"No"},
+    {ques:"Accept-all", ans:"No"},
+  ]
+  let MailServer=[
+    {ques:"SMTP Provider", ans:"GOOGLE"},
+    {ques:"SMTP Provider", ans:"GOOGLE"},
+  ]
     return (
     <>
      <section className='bg-bgmain bg-no-repeat  bg-center bg-cover  '>
@@ -37,8 +57,57 @@ export default function Emailverify() {
           <input type="text" placeholder='' className='text-sm md:text-md outline-none p-2 bg-slate-300 h-10 w-full focus:ring-1 focus:border-black' />
             <Link to="/" className='bg-bgmain text-black font-semibold text-sm flex items-center justify-center md:text-md w-48 h-10'>Email Verifier</Link>
           </div>
-          <Link to="/" className='flex items-center gap-1 font-semibold border-2 duration-700 text-sm md:text-md border-black p-2 rounded-md sm:mr-auto'> <img src={EmailImg} alt="" />Upload your list for bulk verification </Link>
-      </div>
+          <div className='w-[100%] h-[2px] rounded-full flex mt-5 '>
+             <div className='bg-[#4A44F4] ml-[-5px] rounded-full w-[10%] h-[10px] text-transparent'>.</div>
+             <div className='bg-[#FF4646] ml-[-5px] rounded-r-full w-[20%] h-[10px] text-transparent'>.</div>
+             <div className='bg-[#56F444] ml-[-5px] rounded-r-full w-[55%] h-[10px] text-transparent'>.</div>
+             <div className='bg-[#FFF713] ml-[-5px] rounded-r-full w-[25%] h-[10px] text-transparent'>.</div>
+          </div>
+          {/* table */}
+          <div className='grid grid-cols-1 mt-5 lg:grid-cols-3 bg-[#F5F5F5]'>
+            <div className='flex flex-col gap-3  border-l-0 border-b-2 border-r-0 lg:border-r-2 border-b-2 lg:border-b-0 border-t-0 p-3'>
+               <h3 className='text-[17px] sm:text-[19px] font-semibold'>General</h3>
+              <div>
+
+             {
+                GeneralEmail.map((val,id)=>{
+                    return  <div className='flex flex-col gap-3'>
+                    <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> <div className='font-medium'>{val.ques}</div><div>{val.ans}</div></div>
+                    </div>
+                })
+             }
+              </div>
+            </div>
+            <div className='flex flex-col gap-3 border-l-0 border-b-2 border-r-0 lg:border-r-2 border-b-2 lg:border-b-0 border-t-0 p-3'>
+               <h3 className='text-[17px] sm:text-[19px] font-semibold'>Attributes</h3>
+              <div>
+
+             {
+                Attributes.map((val,id)=>{
+                    return  <div className='flex flex-col gap-3'>
+                    <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> <div className='font-medium'>{val.ques}</div><div>{val.ans}</div></div>
+                    </div>
+                })
+             }
+              </div>
+            </div>
+            <div className='flex flex-col gap-3  p-3'>
+               <h3 className='text-[17px] sm:text-[19px] font-semibold'>Mail Server</h3>
+              <div>
+
+             {
+                MailServer.map((val,id)=>{
+                    return  <div className='flex flex-col gap-3'>
+                    <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> <div className='font-medium'>{val.ques}</div><div>{val.ans}</div></div>
+                    </div>
+                })
+             }
+              </div>
+            </div>
+
+
+          </div>
+         </div>
      </section>
       {/* Dive In */}
       <section className='bg-[#F5F5F5] mt-10'>
