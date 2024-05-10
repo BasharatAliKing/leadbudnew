@@ -30,7 +30,7 @@ export default function Emailfinder() {
     </div>
     </section>
      <section className='container'>
-      <div className='shadow-md bg-white rounded-md lg:w-3/4 p-10 md:mt-[-50px] flex flex-col gap-3 mx-auto'>
+      <div className='shadow-md bg-white rounded-md lg:w-3/4 p-10 my-10 md:mt-[-50px] flex flex-col gap-3 mx-auto'>
           <h3 className='text-black font-semibold text-lg text-center sm:text-start'>Unlock Inboxes: Find Any Email Instantly With Our Tool!</h3>
          <div className='rounded-md flex h-16  '>
           <input type="text" placeholder='' className='text-sm md:text-md outline-none p-2 bg-slate-300 h-10 w-full focus:ring-1 focus:border-black' />

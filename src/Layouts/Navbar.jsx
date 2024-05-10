@@ -7,19 +7,22 @@ import { IoCloseSharp } from "react-icons/io5";
 import {Link} from "react-router-dom"
 export default function Navbar() {
   const [open,setOpen]=useState(true);
+  const toggleMenu =()=>{
+    setOpen(true);
+  }
   return (
     <>
    <section className=' bg-bgmain'>
      <div className='container py-3 flex  items-center '>
      <div className="logo"><img src={logo} alt="logo" /></div>
     
-      <ul className='hidden md:flex flex-col md:flex-row gap-4 ml-10 '>
+      <ul className='hidden md:flex flex-col md:flex-row gap-4 md:ml-10 '>
                     <li><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link></li>
                     <li><Link className='font-medium text-sm' to="/emailfinder">Solutions</Link></li>
                     <li><Link className='font-medium text-sm' to="/emailverify">Resources</Link></li>
                     <li><Link className='font-medium text-sm' to="/findemail">Placing</Link></li>
       </ul>
-      <div className='hidden md:flex flex-col md:flex-row ml-auto gap-3'>
+      <div className='hidden md:flex flex-col md:flex-row md:ml-auto gap-3'>
       <Link to="/"><Button2 btn2="Book a Call" /></Link>
         <Link to="/"><Button1 btn1="SignUp" /></Link>
       </div>
@@ -30,10 +33,10 @@ export default function Navbar() {
       {
         open ? null : <div className='flex flex-col absolute left-0 p-3 bg-bgmain w-[100%] top-10  md:hidden'>
         <ul className='flex flex-col gap-3 mx-auto text-center mt-5'>
-                      <li><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link></li>
-                      <li><Link className='font-medium text-sm' to="/emailfinder">Solutions</Link></li>
-                      <li><Link className='font-medium text-sm' to="/emailverify">Resources</Link></li>
-                      <li><Link className='font-medium text-sm' to="/findemail">Placing</Link></li>
+                      <li><Link onClick={toggleMenu} className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link></li>
+                      <li><Link onClick={toggleMenu} className='font-medium text-sm' to="/emailfinder">Solutions</Link></li>
+                      <li><Link onClick={toggleMenu} className='font-medium text-sm' to="/emailverify">Resources</Link></li>
+                      <li><Link onClick={toggleMenu} className='font-medium text-sm' to="/findemail">Placing</Link></li>
         </ul>
         <div className='flex flex-col gap-3 text-center mt-3'>
         <Link to="/" className='text-center mx-auto'><Button2 btn2="Book a Call" /></Link>
