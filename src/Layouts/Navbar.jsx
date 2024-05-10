@@ -24,20 +24,20 @@ export default function Navbar() {
         <Link to="/"><Button1 btn1="SignUp" /></Link>
       </div>
       <div className='text-2xl ml-auto md:hidden' onClick={()=>setOpen(!open)}>
-          {open ?  <IoReorderThreeOutline /> : <IoCloseSharp/> }
+          {open ?  <IoReorderThreeOutline className='text-3xl' /> : <IoCloseSharp/> }
       </div>
       {/* res navbar */}
       {
         open ? null : <div className='flex flex-col absolute left-0 p-3 bg-bgmain w-[100%] top-10  md:hidden'>
-        <ul className='flex flex-col gap-3 mx-auto text-center'>
+        <ul className='flex flex-col gap-3 mx-auto text-center mt-5'>
                       <li><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link></li>
                       <li><Link className='font-medium text-sm' to="/emailfinder">Solutions</Link></li>
                       <li><Link className='font-medium text-sm' to="/emailverify">Resources</Link></li>
                       <li><Link className='font-medium text-sm' to="/findemail">Placing</Link></li>
         </ul>
         <div className='flex flex-col gap-3 text-center mt-3'>
-        <Link to="/"><Button2 btn2="Book a Call" /></Link>
-        <Link to="/"><Button1 btn1="SignUp" /></Link>
+        <Link to="/" className='text-center mx-auto'><Button2 btn2="Book a Call" /></Link>
+        <Link to="/" className='text-center mx-auto'><Button1 btn1="SignUp" /></Link>
         </div>
         </div>
       }
