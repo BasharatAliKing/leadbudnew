@@ -28,12 +28,12 @@ export default function Emailfinder() {
     <div className='container flex flex-col gap-2 md:gap-3 h-screen items-center justify-center'>
       <img src={Emailfinderimg} alt="" />
     <div className='text-center'><Heading1 heading1="Email Finder" /></div>
-     <Para1 para1="Discover the Unseen: Your Ultimate Email Finder Tool Awaits!" />
+   <div className='text-center sm:text-start'>  <Para1 para1="Discover the Unseen: Your Ultimate Email Finder Tool Awaits!" /></div>
     </div>
     </section>
      <section className='container'>
       <div className='shadow-md bg-white rounded-md lg:w-3/4 p-10 md:mt-[-50px] flex flex-col gap-3 mx-auto'>
-          <h3 className='text-black font-semibold text-lg'>Unlock Inboxes: Find Any Email Instantly With Our Tool!</h3>
+          <h3 className='text-black font-semibold text-lg text-center sm:text-start'>Unlock Inboxes: Find Any Email Instantly With Our Tool!</h3>
          <div className='rounded-md flex h-16  '>
           <input type="text" placeholder='' className='text-sm md:text-md outline-none p-2 bg-slate-300 h-10 w-full focus:ring-1 focus:border-black' />
             <button className='bg-bgmain text-black font-semibold text-sm md:text-md w-48 h-10'>Find Email</button>
@@ -62,12 +62,12 @@ export default function Emailfinder() {
       {/* signup free */}
       <section className='bg-bgmain py-10'>
         <div className='container flex flex-col md:flex-row justify-between gap-3'>
-          <div className='md:w-3/4 lg:w-2/4 leading-snug'> <Heading1 heading1="Sign Up For Free To Get 50 Searches Every Month!"/></div>
-         <div className='my-auto flex items-center'> <Button1 btn1="Start to Free"/></div>
+          <div className='md:w-3/4 lg:w-2/4 leading-snug text-center sm:text-start'> <Heading1 heading1="Sign Up For Free To Get 50 Searches Every Month!"/></div>
+         <div className='my-auto justify-center sm:justify-start flex items-center'> <Button1 btn1="Start to Free"/></div>
         </div>
       </section>
       {/* streamline connection */}
-      <section className='container flex flex-col md:flex-row my-16'>
+      <section className='container flex flex-col md:flex-row my-16 gap-3'>
         <div className='md:w-1/2 md:p-10 flex flex-col gap-3'>
           <Heading1 heading1="Streamline Connections With Precision Emails" />
           <Para1 para1="In A World Where Connections Mean Everything, Introducing Our Cutting-Edge Email Finder Tool, A Game Changer For Professionals And Businesses Alike."/>
@@ -83,7 +83,7 @@ export default function Emailfinder() {
       </section>
       {/* streamline connection */}
       <section className=' bg-[#48fa893f] '>
-        <div className='container flex flex-col md:flex-row py-10'>
+        <div className='container flex flex-col md:flex-row py-10 gap-3'>
         <div className='md:w-1/2'><img src={DiscoverContact} alt="" /></div>
         <div className='md:w-1/2 md:p-10 flex flex-col gap-3'>
           <Heading1 heading1="Instantly Discover Contacts, Boost Outreach" />
