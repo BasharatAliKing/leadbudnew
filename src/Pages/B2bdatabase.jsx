@@ -22,12 +22,12 @@ import Footer from '../Layouts/Footer';
 import {Link} from "react-router-dom";
 export default function B2bdatabase() {
   let UnvellingMedia=[
-    { img: <img className='max-w-12 h-12' src={Unveil1} />, mainheading:"Intelligent Lead Scoring", para:"Leverage Advanced Algorithms To Prioritize On Leads With The Highest Potential Your Conversion Efforts" },
-    { img: <img className='max-w-12 h-12' src={Unveil2} />, mainheading:"AI-Powered Predictive Analytics", para:"Harness The Power Of Artificial Intelligence To Predict Future Trends And Behaviors." },
-    { img: <img className='max-w-12 h-12' src={Unveil3} />, mainheading:"Automated Email Campaigns", para:"Streamline Your Outreach With Automated Email Campaigns, Saving Time And Ensuring Consistent." },
-    { img: <img className='max-w-12 h-12' src={Unveil4} />, mainheading:"Customizable Lead Forms", para:"Stay In The Know With A Dynamic Analytics Dashboard, Providing Real-Time Insights Into Your Campaign." },
-    { img: <img className='max-w-12 h-12' src={Unveil5} />, mainheading:"Multi-channel Integration", para:"Seamlessly Connect With Your Audience Across Various Channels, Ensuring A Cohesive And Effective." },
-    { img: <img className='max-w-12 h-12' src={Unveil6} />, mainheading:"Real-time Analytics Dashboard", para:"Leverage Advanced Algorithms To Prioritize On Leads With The Highest Potential Your Conversion Efforts." },
+    { img: <img className='max-w-12 h-12' alt='my-img' src={Unveil1} />, mainheading:"Intelligent Lead Scoring", para:"Leverage Advanced Algorithms To Prioritize On Leads With The Highest Potential Your Conversion Efforts" },
+    { img: <img className='max-w-12 h-12' alt='my-img' src={Unveil2} />, mainheading:"AI-Powered Predictive Analytics", para:"Harness The Power Of Artificial Intelligence To Predict Future Trends And Behaviors." },
+    { img: <img className='max-w-12 h-12' alt='my-img' src={Unveil3} />, mainheading:"Automated Email Campaigns", para:"Streamline Your Outreach With Automated Email Campaigns, Saving Time And Ensuring Consistent." },
+    { img: <img className='max-w-12 h-12' alt='my-img' src={Unveil4} />, mainheading:"Customizable Lead Forms", para:"Stay In The Know With A Dynamic Analytics Dashboard, Providing Real-Time Insights Into Your Campaign." },
+    { img: <img className='max-w-12 h-12' alt='my-img' src={Unveil5} />, mainheading:"Multi-channel Integration", para:"Seamlessly Connect With Your Audience Across Various Channels, Ensuring A Cohesive And Effective." },
+    { img: <img className='max-w-12 h-12' alt='my-img' src={Unveil6} />, mainheading:"Real-time Analytics Dashboard", para:"Leverage Advanced Algorithms To Prioritize On Leads With The Highest Potential Your Conversion Efforts." },
      ]
   return (
    <>
@@ -44,7 +44,7 @@ export default function B2bdatabase() {
     </div>
     </section>
     <div className='lg:w-3/4 container mx-auto py-10 md:mt-[-200px]'>
-      <img src={HomeImg} alt="" />
+      <img src={HomeImg} alt="my-img" />
     </div>
     {/* Strategy starts here */}
     <section className='container lg:w-3/4 flex justify-center flex-col gap-3 pt-5 py-10 md:py-16'>
@@ -90,7 +90,7 @@ export default function B2bdatabase() {
        <Link to="/" className='mx-auto sm:mx-0 sm:mr-auto'> <Button3 btn3="Start to Free" /></Link>
       </div>
       <div className='md:w-1/2 mt-10'>
-        <img src={BeyondImg} alt="" />
+        <img src={BeyondImg} alt="my-img" />
       </div>
      </div>
     </section>

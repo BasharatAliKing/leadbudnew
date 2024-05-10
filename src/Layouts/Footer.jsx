@@ -4,7 +4,6 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
-import Para1 from '../Components/Para1';
 import Visa from "../Utilities/visa.png";
 import Paypal from "../Utilities/paypal.png";
 import Master from "../Utilities/master.png";
@@ -65,7 +64,7 @@ export default function Footer() {
       </div>
 
       <div className='flex flex-col text-center sm:text-sm md:flex-row justify-between items-center gap-5 md:gap-0 text-white py-3 pt-10'>
-      <div className=' gap-1 flex md:hidden flex-wrap mx-auto sm:mx-0'>
+      <div className=' gap-1 flex md:hidden flex-wrap mx-auto sm:mx-0 justify-center'>
             <img src={Visa} alt="" />
             <img src={Paypal} alt="" />
             <img src={Master} alt="" />

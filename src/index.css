@@ -3,4 +3,13 @@
 *{
     font-family: "Poppins", sans-serif;
 }
+.leadbud-submenu{
+    display: none
+}
+.leadbud-hov:hover{
+    .leadbud-submenu{
+        display: flex;
+        flex-direction: column
+    }
+}
 @tailwind utilities;

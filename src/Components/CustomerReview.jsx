@@ -1,6 +1,4 @@
 import React from 'react'
-
-import Heading2 from './Heading2';
 import Para1 from './Para1';
 import quote from "../Utilities/Icon awesome-quote-left.png";
 import star from "../Utilities/Icon ionic-ios-star.png"

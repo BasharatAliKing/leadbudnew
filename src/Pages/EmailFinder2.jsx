@@ -14,11 +14,18 @@ import Streamline from "../Utilities/streamline.png";
 import { FaCheckCircle } from "react-icons/fa";
 import DiscoverContact from "../Utilities/discovercontacts.png"
 import {Link} from "react-router-dom";
+import Button2 from '../Components/Button2';
 export default function Emailfinder() {
   let LostEmail=[
     {img:Img1 , title:"Find Email By Domain", des:"Find all email addresses on any domain in a matter of minutes. Bulk domain option is handy if you want to explore up to 20,000 domains at a time."},
     {img:Img2 , title:"Find Emails By Company", des:"Use our database to find just the companies you need by industry, company size, location, name and more."},
     {img:Img3 , title:"Get Emails From Names", des:"Know your lead’s name and company domain but not their email? We can find it for you. Use this feature to complete your prospects lists."},
+  ]
+  let Emails=[
+    {mail: "king@gmail.com"},
+    {mail: "king@gmail.com"},
+    {mail: "king@gmail.com"},
+    {mail: "king@gmail.com"},
   ]
   return (
     <>
@@ -32,10 +39,21 @@ export default function Emailfinder() {
      <section className='container'>
       <div className='shadow-md bg-white rounded-md lg:w-3/4 p-10 my-10 md:mt-[-50px] flex flex-col gap-3 mx-auto'>
           <h3 className='text-black font-semibold text-lg text-center sm:text-start'>Unlock Inboxes: Find Any Email Instantly With Our Tool!</h3>
-         <div className='rounded-md flex h-16  '>
-          <input type="text" placeholder='' className='text-sm md:text-md outline-none p-2 bg-slate-300 h-10 w-full focus:ring-1 focus:border-black' />
+         <div className='rounded-md flex'>
+          <input type="text" placeholder='' className='text-sm md:text-md outline-none p-2 bg-[#F5F5F5] h-10 w-full focus:ring-1 focus:border-black' />
             <Link to="/" className='bg-bgmain text-black font-semibold text-sm md:text-md flex items-center justify-center w-48 h-10'>Find Email</Link>
           </div>
+          <ul>
+           {
+            Emails.map((val,id)=>{
+              return  <li className='bg-[#F5F5F5] p-2 text-sm md:text-md font-normal border-2 border-b'>{val.mail}</li>
+           
+            })
+           }
+             </ul>
+             <p className='text-sm md:text-md font-normal text-center lg:w-3/4 mx-auto'>Sign up to see all email addresses found for this domain
+and receive <b> 50 free email searches/month.</b></p>
+  <Link to="/" className='mx-auto'><Button2 btn2="Get Your Free Leadbud.Io Account" /></Link>
       </div>
      </section>
      {/* lost in the inbox */}
@@ -47,7 +65,7 @@ export default function Emailfinder() {
                  LostEmail.map((val,id)=>{
                   return (
                    <div className='text-center flex flex-col gap-3 mt-3 md:mt-5 p-5'>
-                      <img className='mx-auto h-16 w-16' src={val.img} alt='my-img' />
+                      <img className='mx-auto h-16 w-16' src={val.img} alt='my-img'/>
                     <h4 className='text-[20px] md:text-xl font-semibold '>{val.title}</h4>
                     <p className='text-sm md:text-md text-para'>{val.des}</p>
                     </div>
