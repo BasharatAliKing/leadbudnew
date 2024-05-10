@@ -34,7 +34,7 @@ export default function Emailfinder() {
           <h3 className='text-black font-semibold text-lg text-center sm:text-start'>Unlock Inboxes: Find Any Email Instantly With Our Tool!</h3>
          <div className='rounded-md flex h-16  '>
           <input type="text" placeholder='' className='text-sm md:text-md outline-none p-2 bg-slate-300 h-10 w-full focus:ring-1 focus:border-black' />
-            <button className='bg-bgmain text-black font-semibold text-sm md:text-md w-48 h-10'>Find Email</button>
+            <Link to="/" className='bg-bgmain text-black font-semibold text-sm md:text-md flex items-center justify-center w-48 h-10'>Find Email</Link>
           </div>
       </div>
      </section>
@@ -93,9 +93,7 @@ export default function Emailfinder() {
           </ul>
           <Link to="/" className='bg-bgmain text-black mr-auto text- font-semibold text-sm px-8 py-3 rounded-md md:text-lg'>Start to Free</Link>
         </div>
-        </div>
-     
-       
+        </div> 
       </section>
 
     {/* Slider logos here */}
