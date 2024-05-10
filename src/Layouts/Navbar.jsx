@@ -39,8 +39,8 @@ export default function Navbar() {
                       <li><Link onClick={toggleMenu} className='font-medium text-sm' to="/findemail">Placing</Link></li>
         </ul>
         <div className='flex flex-col gap-3 text-center mt-3'>
-        <Link to="/" className='text-center mx-auto'><Button2 btn2="Book a Call" /></Link>
-        <Link to="/" className='text-center mx-auto'><Button1 btn1="SignUp" /></Link>
+        <Link to="/" onClick={toggleMenu} className='text-center mx-auto'><Button2 btn2="Book a Call" /></Link>
+        <Link to="/" onClick={toggleMenu} className='text-center mx-auto'><Button1 btn1="SignUp" /></Link>
         </div>
         </div>
       }
