@@ -51,7 +51,7 @@ export default function Emailverify() {
     </div>
     </section>
     <section className='container'>
-      <div className='shadow-md bg-white rounded-md lg:w-3/4 p-10 my-10 md:my-0 md:mt-[-50px] flex flex-col gap-3 mx-auto'>
+      <div className='shadow-md bg-white rounded-md lg:w-3/4 p-5 md:p-10 my-10 md:my-0 md:mt-[-50px] flex flex-col gap-3 mx-auto'>
           <h3 className='text-black font-semibold text-lg text-center sm:text-start'>Elevate Your Inbox Credibility Instantly!</h3>
          <div className='rounded-md flex'>
           <input type="text" placeholder='' className='text-sm md:text-md outline-none p-2 bg-slate-300 h-10 w-full focus:ring-1 focus:border-black' />
@@ -65,7 +65,7 @@ export default function Emailverify() {
           </div>
           {/* table */}
           <div className='grid grid-cols-1 mt-5 lg:grid-cols-3 bg-[#F5F5F5]'>
-            <div className='flex flex-col gap-3  border-l-0 border-b-2 border-r-0 lg:border-r-2 border-b-2 lg:border-b-0 border-t-0 p-3'>
+            <div className='flex flex-col gap-3  border-l-0 border-b-2 border-r-0 lg:border-r-2  lg:border-b-0 border-t-0 p-3'>
                <h3 className='text-[17px] sm:text-[19px] font-semibold'>General</h3>
               <div>
 
@@ -78,7 +78,7 @@ export default function Emailverify() {
              }
               </div>
             </div>
-            <div className='flex flex-col gap-3 border-l-0 border-b-2 border-r-0 lg:border-r-2 border-b-2 lg:border-b-0 border-t-0 p-3'>
+            <div className='flex flex-col gap-3 border-l-0 border-b-2 border-r-0 lg:border-r-2  lg:border-b-0 border-t-0 p-3'>
                <h3 className='text-[17px] sm:text-[19px] font-semibold'>Attributes</h3>
               <div>
 
