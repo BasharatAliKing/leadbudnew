@@ -20,8 +20,8 @@ export default function Navbar() {
                     <li><Link className='font-medium text-sm' to="/findemail">Placing</Link></li>
       </ul>
       <div className='hidden md:flex flex-col md:flex-row ml-auto gap-3'>
-        <Button2 btn2="Book a Call" />
-        <Button1 btn1="SignUp" />
+      <Link to="/"><Button2 btn2="Book a Call" /></Link>
+        <Link to="/"><Button1 btn1="SignUp" /></Link>
       </div>
       <div className='text-2xl ml-auto md:hidden' onClick={()=>setOpen(!open)}>
           {open ?  <IoReorderThreeOutline /> : <IoCloseSharp/> }
@@ -36,8 +36,8 @@ export default function Navbar() {
                       <li><Link className='font-medium text-sm' to="/findemail">Placing</Link></li>
         </ul>
         <div className='flex flex-col gap-3 text-center mt-3'>
-          <Button2 btn2="Book a Call" />
-          <Button1 btn1="SignUp" />
+        <Link to="/"><Button2 btn2="Book a Call" /></Link>
+        <Link to="/"><Button1 btn1="SignUp" /></Link>
         </div>
         </div>
       }

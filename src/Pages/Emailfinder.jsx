@@ -4,18 +4,16 @@ import CustomersSlider from '../Components/CustomersSlider';
 import FrequentlyQuestion from '../Components/FrequentlyQuestion';
 import Footer from '../Layouts/Footer';
 import Heading1 from '../Components/Heading1';
-import Heading2 from '../Components/Heading2';
 import Button1 from '../Components/Button1';
 import Emailfinderimg from "../Utilities/emailfinder.png"
 import Para1 from '../Components/Para1';
-import Button3 from '../Components/Button3';
 import Img1 from "../Utilities/Union 21.png";
 import Img2 from "../Utilities/Union 22.png";
 import Img3 from "../Utilities/Union 23.png";
-import Button2 from "../Components/Button2";
 import Streamline from "../Utilities/streamline.png";
 import { FaCheckCircle } from "react-icons/fa";
 import DiscoverContact from "../Utilities/discovercontacts.png"
+import {Link} from "react-router-dom";
 export default function Emailfinder() {
   let LostEmail=[
     {img:Img1 , title:"Find Email By Domain", des:"Find all email addresses on any domain in a matter of minutes. Bulk domain option is handy if you want to explore up to 20,000 domains at a time."},
@@ -63,7 +61,7 @@ export default function Emailfinder() {
       <section className='bg-bgmain py-10'>
         <div className='container flex flex-col md:flex-row justify-between gap-3'>
           <div className='md:w-3/4 lg:w-2/4 leading-snug text-center sm:text-start'> <Heading1 heading1="Sign Up For Free To Get 50 Searches Every Month!"/></div>
-         <div className='my-auto justify-center sm:justify-start flex items-center'> <Button1 btn1="Start to Free"/></div>
+         <Link to="/" className='my-auto justify-center sm:justify-start flex items-center'> <Button1 btn1="Start to Free"/></Link>
         </div>
       </section>
       {/* streamline connection */}
@@ -77,7 +75,7 @@ export default function Emailfinder() {
             <li className='flex gap-1 items-center font-normal'><FaCheckCircle className='text-green'/> Verified Results</li>
             <li className='flex gap-1 items-center font-normal'><FaCheckCircle className='text-green'/> Advanced Filters</li>
           </ul>
-          <button className='bg-bgmain text-black mr-auto text- font-semibold text-sm px-8 py-3 rounded-md md:text-lg'>Start to Free</button>
+          <Link to="/" className='bg-bgmain text-black mr-auto text- font-semibold text-sm px-8 py-3 rounded-md md:text-lg'>Start to Free</Link>
         </div>
         <div className='md:w-1/2'><img src={Streamline} alt="" /></div>
       </section>
@@ -93,7 +91,7 @@ export default function Emailfinder() {
             <li className='flex gap-1 items-center font-normal'><FaCheckCircle className='text-green'/> Responsive Support</li>
             <li className='flex gap-1 items-center font-normal'><FaCheckCircle className='text-green'/> Integration Capabilities</li>
           </ul>
-          <button className='bg-bgmain text-black mr-auto text- font-semibold text-sm px-8 py-3 rounded-md md:text-lg'>Start to Free</button>
+          <Link to="/" className='bg-bgmain text-black mr-auto text- font-semibold text-sm px-8 py-3 rounded-md md:text-lg'>Start to Free</Link>
         </div>
         </div>
      

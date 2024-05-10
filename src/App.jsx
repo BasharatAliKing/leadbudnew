@@ -8,7 +8,7 @@ import Findemail from "./Pages/Findemail";
 export default function App() {
   return (
    
-    <Router>
+    <Router className="font-poppins">
         <Navbar/>
         <Routes>
             <Route exact path='/' Component={B2bdatabase}/>

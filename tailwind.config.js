@@ -22,6 +22,9 @@ module.exports = {
       'green': '#56F444',
       'para':'#7B7B7B',
     },
+    fontFamily: {
+      'poppins': ['"Poppins"'],
+    },
   }
 },
   plugins: [],

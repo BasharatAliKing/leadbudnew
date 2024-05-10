@@ -11,6 +11,7 @@ import Master from "../Utilities/master.png";
 import Payooner from "../Utilities/payooneer.png";
 import Pay from "../Utilities/pay.png";
 import Wirepay from "../Utilities/wirepay.png";
+import {Link} from "react-router-dom";
 export default function Footer() {
   return (
     <div className='bg-[#030621] '>
@@ -18,48 +19,48 @@ export default function Footer() {
       <div className='flex flex-col sm:flex-row text-center items-center gap-3'>
       <img className='w-[50%] sm:w-auto' src={Logo} alt="" />
       <ul className='flex flex-row text-white gap-3 md:gap-5 md:ml-10 text-sm'>
-        <li><a href="/">Home</a></li>
-        <li><a href="/">Feature</a></li>
-        <li><a href="/">Pricing</a></li>
-        <li><a href="/">Tutorials</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/">Feature</Link></li>
+        <li><Link to="/">Pricing</Link></li>
+        <li><Link to="/">Tutorials</Link></li>
       </ul>
       <div className='flex text-green gap-3 md:ml-auto'>
-        <FaFacebookF className='border border-green p-2 rounded-full h-8 w-8'/>
-        <FaLinkedinIn className='border border-green p-2 rounded-full h-8 w-8'/>
-        <FaTwitter className='border border-green p-2 rounded-full h-8 w-8'/>
-        <FaInstagram className='border border-green p-2 rounded-full h-8 w-8'/>
+       <Link to="/"><FaFacebookF className='border border-green p-2 rounded-full h-8 w-8'/></Link>
+       <Link to="/"><FaLinkedinIn className='border border-green p-2 rounded-full h-8 w-8'/></Link>
+       <Link to="/"><FaTwitter className='border border-green p-2 rounded-full h-8 w-8'/></Link>
+       <Link to="/"><FaInstagram className='border border-green p-2 rounded-full h-8 w-8'/></Link>
       </div>
       </div>
       <hr className='my-10 text-para h-[2px]' />
       <div className='grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 text-center sm:text-start justify-between text-white '>
-        <div> <h3 className='text-lg font-semibold '>Tools</h3> <ul className='flex flex-col mt-1 md:mt-5 text-para font-medium text-sm'><li><a href="/">Leadbud</a></li></ul></div>
+        <div> <h3 className='text-lg font-semibold '>Tools</h3> <ul className='flex flex-col mt-1 md:mt-5 text-para font-medium text-sm'><li><Link to="/">Leadbud</Link></li></ul></div>
         <div> 
             <h3 className='text-lg font-semibold '>Leadbud</h3> 
             <ul className='flex flex-col mt-1 md:mt-5 text-para font-medium text-sm gap-2'>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Tutorials</a></li>
-                <li><a href="/">Affiliate Program</a></li>
-                <li><a href="/">Privacy Policy</a></li>
-                <li><a href="/">Terms and Conditions</a></li>
+                <li><Link to="/">About</Link></li>
+                <li><Link to="/">Tutorials</Link></li>
+                <li><Link to="/">Affiliate Program</Link></li>
+                <li><Link to="/">Privacy Policy</Link></li>
+                <li><Link to="/">Terms and Conditions</Link></li>
                 </ul></div>
         <div> 
             <h3 className='text-lg font-semibold '>Custom Solutions</h3> 
             <ul className='flex flex-col mt-1 md:mt-5 text-para font-medium text-sm gap-2'>
-                <li><a href="/">Exact Web Data</a></li>
-                <li><a href="/">Data Monitionring</a></li>
-                <li><a href="/">Custom Database</a></li>
-                <li><a href="/">Custom Bots</a></li>
+                <li><Link to="/">Exact Web Data</Link></li>
+                <li><Link to="/">Data Monitionring</Link></li>
+                <li><Link to="/">Custom Database</Link></li>
+                <li><Link to="/">Custom Bots</Link></li>
                 </ul></div>
         <div> <h3 className='text-lg font-semibold '>Development</h3> 
         <ul className='flex flex-col mt-1 md:mt-5 text-para font-medium text-sm gap-2'>
-            <li><a href="/">Changelog</a></li>
-            <li><a href="/">Bot API (Public Beta)</a></li>
+            <li><Link to="/">Changelog</Link></li>
+            <li><Link to="/">Bot API (Public Beta)</Link></li>
         </ul></div>
         <div> 
             <h3 className='text-lg font-semibold '>Help and Support</h3>
              <ul className='flex flex-col mt-1 md:mt-5 text-para font-medium text-sm gap-2'>
-                <li><a href="/">Contact Info</a></li>
-                <li><a href="/">Info@leadbud.io</a></li>
+                <li><Link to="/">Contact Info</Link></li>
+                <li><Link to="/">Info@leadbud.io</Link></li>
                 </ul></div>
       </div>
 

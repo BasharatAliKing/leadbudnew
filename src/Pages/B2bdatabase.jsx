@@ -19,7 +19,7 @@ import Sliderlogos from '../Components/Sliderlogos';
 import CustomersSlider from '../Components/CustomersSlider';
 import FrequentlyQuestion from '../Components/FrequentlyQuestion';
 import Footer from '../Layouts/Footer';
-
+import {Link} from "react-router-dom";
 export default function B2bdatabase() {
   let UnvellingMedia=[
     { img: <img className='max-w-12 h-12' src={Unveil1} />, mainheading:"Intelligent Lead Scoring", para:"Leverage Advanced Algorithms To Prioritize On Leads With The Highest Potential Your Conversion Efforts" },
@@ -35,7 +35,7 @@ export default function B2bdatabase() {
     <div className='container flex flex-col gap-2 md:gap-3 h-screen items-center justify-center'>
     <div className='text-center'><Heading1 heading1="Unlock the Power of Our B2B Database" /></div>
      <Heading2 heading2="50M Companies & 500M Contacts" />
-      <Button1 btn1="Try free B2B Database" />
+    <Link to="/"> <Button1 btn1="Try free B2B Database" /></Link>
       <ul className='flex flex-wrap gap-3 md:gap-5'>
         <li className='flex items-center mx-auto sm:mx-0 font-medium gap-1'><HiMiniCheckBadge /> Real-time email verifications</li>
         <li className='flex items-center mx-auto sm:mx-0 font-medium gap-1'><HiMiniCheckBadge /> More than 15 filtering options</li>
@@ -87,7 +87,7 @@ export default function B2bdatabase() {
        </div>
        <Mediaobject img={<HiMiniCheckBadge />} mediaheading="Market Insights"  para="Dive Deep Into Market Trends And Gain Valuable Insights To Stay Ahead Of The Competition." />
        <Mediaobject img={<HiMiniCheckBadge />} mediaheading="Market Insights"  para="Dive Deep Into Market Trends And Gain Valuable Insights To Stay Ahead Of The Competition." />
-       <Button3 btn3="Start to Free" />
+       <Link to="/" className='mx-auto sm:mx-0 sm:mr-auto'> <Button3 btn3="Start to Free" /></Link>
       </div>
       <div className='md:w-1/2 mt-10'>
         <img src={BeyondImg} alt="" />
