@@ -13,6 +13,7 @@ export default function CustomersSlider() {
         autoplay:true,
         infinite: true,
         speed: 700,
+        arrows:false,
         slidesToShow: 2,
         slidesToScroll: 1,
         responsive: [

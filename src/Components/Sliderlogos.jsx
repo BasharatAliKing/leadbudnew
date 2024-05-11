@@ -14,6 +14,7 @@ export default function Sliderlogos() {
         autoplay:true,
         infinite: true,
         speed: 500,
+        arrows:false,
         slidesToShow: 6,
         slidesToScroll: 1,
         responsive: [
