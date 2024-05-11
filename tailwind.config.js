@@ -17,6 +17,7 @@ module.exports = {
     extend: {
     backgroundImage: {
       'bgmain': "url('/src/Utilities/mainbg.png')",
+      'bgscraperfb': "url('/src/Utilities/scraperfb.png')",
     },
     colors: {
       'green': '#56F444',

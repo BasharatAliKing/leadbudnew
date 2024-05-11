@@ -7,6 +7,7 @@ import Emailverify from './Pages/Emailverify';
 import Findemail from "./Pages/Findemail";
 import EmailFinder2 from "./Pages/EmailFinder2";
 import EmailVerifier2 from "./Pages/EmailVerifier2";
+import Facebook from "./Pages/Facebook";
 export default function App() {
   return (
    
@@ -20,6 +21,7 @@ export default function App() {
             <Route exact path='/emailverifier2' Component={EmailVerifier2}/>
             <Route exact path='/findemail' Component={Findemail}/>
             <Route exact path='/emailfinder2' Component={EmailFinder2}/>
+            <Route exact path='/facebookpage' Component={Facebook}/>
         </Routes>
     </Router>
 
