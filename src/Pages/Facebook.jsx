@@ -64,13 +64,16 @@ export default function B2bdatabase() {
       <img src={FacebookImg} alt="my-img" />
     </div>
      {/* Facebook post */}
-     <section className='container flex flex-col md:flex-row my-16 gap-3'>
+     <section className='container flex flex-col md:flex-row my-10 md:my-16 gap-3'>
+     <div className='md:w-1/2 flex items-center justify-center md:hidden'>
+          <img src={Fbpost} alt="my-img" />
+          </div>
         <div className='md:w-1/2 md:p-10 flex flex-col gap-3 justify-center'>
           <Heading1 heading1="Facebook Post Extractor" />
           <Para1 para1="Integrate Muzzleads Data Effortlessly Into Your Marketing And Sales Strategies For A Lead Boost. Elevate Campaigns And Achieve Superior Conversions With Seamless Data Utilization. Harness Muzzleads Insights For Impactful Marketing. Drive Conversions By Leveraging Data Seamlessly. Discover A New Era Of Simplicity And Productivity."/>
          <Link to="/" className='mr-auto'><Button3 btn3="Start to Free" /></Link>
          </div>
-        <div className='md:w-1/2 flex items-center justify-center relative'>
+        <div className='md:w-1/2 hidden md:flex items-center justify-center '>
           <img src={Fbpost} alt="my-img" />
           </div>
       </section>
@@ -88,13 +91,16 @@ export default function B2bdatabase() {
       </div>
       </section>
      {/* Facebook UID */}
-     <section className=' container flex flex-col md:flex-row my-16 gap-3'>
+     <section className=' container flex flex-col md:flex-row my-10 md:my-16 gap-3'>
+     <div className='md:w-1/2 md:hidden items-center justify-center relative'>
+          <img src={Fbuid} alt="my-img" />
+          </div>
         <div className='md:w-1/2 md:p-10 flex flex-col gap-3 justify-center'>
           <Heading1 heading1="Facebook UID Convertor" />
           <Para1 para1="Integrate Muzzleads Data Effortlessly Into Your Marketing And Sales Strategies For A Lead Boost. Elevate Campaigns And Achieve Superior Conversions With Seamless Data Utilization. Harness Muzzleads Insights For Impactful Marketing. Drive Conversions By Leveraging Data Seamlessly. Discover A New Era Of Simplicity And Productivity."/>
          <Link to="/" className='mr-auto'><Button3 btn3="Start to Free" /></Link>
          </div>
-        <div className='md:w-1/2 flex items-center justify-center relative'>
+        <div className='md:w-1/2 hidden md:flex items-center justify-center relative'>
           <img src={Fbuid} alt="my-img" />
           </div>
       </section>

@@ -77,7 +77,7 @@ export default function Emailfinder() {
           </ul>
           <Link to="/" className='bg-bgmain text-black mr-auto text- font-semibold text-sm px-8 py-3 rounded-md md:text-lg'>Start to Free</Link>
         </div>
-        <div className='md:w-1/2'><img src={Streamline} alt="" /></div>
+        <div className='md:w-1/2 '><img src={Streamline} alt="" /></div>
       </section>
       {/* streamline connection */}
       <section className=' bg-[#48fa893f] '>
