@@ -26,6 +26,7 @@ export default function Navbar() {
                       <li><Link className='p-2 pr-8 hover:bg-green text-black font-medium' to="/emailfinder2">Page-4</Link></li>
                       <li><Link className='p-2 pr-8 hover:bg-green text-black font-medium' to="/emailverifier2">Page-5</Link></li>
                       <li><Link className='p-2 pr-8 hover:bg-green text-black font-medium' to="/facebookpage">Page-6</Link></li>
+                      <li><Link className='p-2 pr-8 hover:bg-green text-black font-medium' to="/salesai">Page-7</Link></li>
                     </ul>
                     </li>
                     <li><Link className='font-medium text-sm' to="/">Solutions</Link></li>
@@ -51,6 +52,7 @@ export default function Navbar() {
                       <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/emailfinder2">Page-4</Link></li>
                       <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/emailverifier2">Page-5</Link></li>
                       <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/facebookpage">Page-6</Link></li>
+                      <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/salesai">Page-7</Link></li>
                     </ul>
                     </li>
                       <li><Link onClick={toggleMenu} className='font-medium text-sm' to="/">Solutions</Link></li>
