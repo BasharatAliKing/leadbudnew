@@ -32,7 +32,7 @@ export default function B2bdatabase() {
   return (
    <>
     <section className='bg-bgmain bg-no-repeat  bg-center bg-cover  '>
-    <div className='container flex flex-col gap-2 md:gap-3 h-screen items-center justify-center'>
+    <div className=' container flex flex-col gap-2 md:gap-3 h-screen items-center justify-center'>
     <div className='text-center'><Heading1 heading1="Unlock the Power of Our B2B Database" /></div>
      <Heading2 heading2="50M Companies & 500M Contacts" />
     <Link to="/"> <Button1 btn1="Try free B2B Database" /></Link>
