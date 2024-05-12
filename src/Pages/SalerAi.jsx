@@ -55,7 +55,7 @@ export default function B2bdatabase() {
                 <div className='md:w-1/2'><img src={WorkingAicara} alt="" /></div>
                 <div className='md:w-1/2 md:px-7 flex flex-col gap-3'>
                     <CaraAITitle title="Let's Kick Off Our Collaboration, Here's How. " />
-                    <Heading1 heading1="Start Working With Cara In Three Steps" />
+                  <div className='text-center sm:text-start'><Heading1 heading1="Start Working With Cara In Three Steps" /></div>
                     {
                         WorkingCara.map((val, id) => {
                             return (
@@ -126,7 +126,7 @@ export default function B2bdatabase() {
                 </div>
             </section>
             {/* Advance Face AI */}
-            <section class="bg-FaceAibg container py-16 flex flex-col md:flex-row">
+            <section class="bg-FaceAibg container py-16 flex flex-col md:flex-row gap-3">
                 <div className='md:w-1/2 text-white flex flex-col justify-center gap-3'>
                     <div className='flex shadow-lg items-center rounded-full  mr-auto pr-3 text-[12px] md:text-[13px] bg-[#24441F]'><img src={Cara} alt="my-img" className='mr-1' />Here's Why You Should Hire Me Today.</div>
                     <div className='md:w-2/4'> <Heading1 heading1="Advance Face Ai Recognition Algorithm" /></div>
