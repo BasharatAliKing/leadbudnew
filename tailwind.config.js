@@ -18,6 +18,7 @@ module.exports = {
     backgroundImage: {
       'bgmain': "url('/src/Utilities/mainbg.png')",
       'bgscraperfb': "url('/src/Utilities/scraperfb.png')",
+      'FaceAibg': "url('/src/Utilities/advancefaceai-bg.png')",
     },
     colors: {
       'green': '#56F444',
