@@ -17,4 +17,11 @@
     flex-direction: row;
     max-height: calc(100vh - 70px);
 }
+@media (max-width:640px){
+    .salesai{
+        display: flex;
+        flex-direction: row;
+        max-height:auto;
+    }
+}
 @tailwind utilities;

@@ -23,6 +23,12 @@ import DatabaseIcon from "../Utilities/Icon awesome-database.png";
 import YoutubeIcon from "../Utilities/Icon material-subscriptions.png";
 import FaceAi from "../Utilities/Face-Ai.png"
 import Button3 from '../Components/Button3';
+import { FaCheckCircle } from "react-icons/fa";
+import LinkedinImg from "../Utilities/Linkedin (1).png";
+import ApolloImg from "../Utilities/apollo.png";
+import ChatgptImg from "../Utilities/openai.png";
+import GooglestoreImg from "../Utilities/google-chrome-store.png";
+import GmailImg from "../Utilities/gmail.png";
 export default function B2bdatabase() {
     let WorkingCara = [
         { img: UserImg, title: "Face Recognition", para: "Tell Cara About Your Business, Your Ideal Customer Profile, And Your Preferred Communication Style." },
@@ -41,8 +47,28 @@ export default function B2bdatabase() {
     return (
         <>
             <section className='bg-bgmain bg-no-repeat  bg-center bg-cover  '>
-                <div className='salesai container flex flex-col md:flex-row gap-2 md:gap-3 h-screen'>
-                    <div className='md:w-1/2'></div>
+                <div className='salesai container flex flex-col md:flex-row gap-2 md:gap-3 py-10 md:py-0 h-auto md:h-screen'>
+                    <div className='md:w-1/2 flex flex-col justify-center gap-3'>
+                        <h3 className='text-[25px] md:text-[30px] lg:text-[33px] font-normal'>Hi, I'm Cara, <br/> Your <b>AI Sales Agent</b></h3>
+                    <ul className='flex flex-col gap-3'>
+                        <li className='flex flex-wrap items-center gap-2 text-[12px] md:text-[14px]'> <FaCheckCircle className='text-[14px] md:text-[16px]'/> I Search 
+                        <div className='flex items-center gap-1 font-normal text-[12px] md:text-[15px]'><img src={LinkedinImg} alt='my-img' />Linkedin</div>
+                        <div className='flex items-center gap-1 font-normal text-[12px] md:text-[15px]'><img src={ApolloImg} alt='my-img' />Apollo</div>
+                        and 50+ sources to find leads.
+                        </li>
+                        <li className='flex flex-wrap items-center gap-2 text-[12px] md:text-[14px]'><FaCheckCircle className='text-[14px] md:text-[16px]' /> Then I ghostwrite personalized emails using
+                        <div className='flex items-center gap-1 font-normal text-[12px] md:text-[15px]'><img src={ChatgptImg} alt='my-img' />ChatGPT</div>
+                        </li>
+                        <li className='flex flex-wrap items-center gap-2 text-[12px] md:text-[14px]'><FaCheckCircle className='text-[14px] md:text-[16px]' /> Next, I'll send them with your
+                        <div className='flex items-center gap-1 font-normal text-[12px] md:text-[15px]'><img src={GmailImg} alt='my-img' />Gmail Account</div>
+                        </li>
+                        <div className='rounded-md flex h-16 md:w-3/4 '>
+          <input type="text" placeholder='' className='text-sm md:text-md outline-none p-2 bg-white h-10 w-full focus:ring-1 focus:border-black' />
+            <Link to="/" className='bg-black text-white font-semibold text-sm md:text-md flex items-center justify-center w-48 h-10'>Start Trail</Link>
+          </div>
+          <li className='mt-[-10px] flex items-center gap-1 font-normal text-[12px] md:text-[15px]'><img src={GooglestoreImg} alt="" />4,8 / 5 In the Google Chrome Store</li>
+                    </ul>
+                    </div>
                     <div className='md:w-1/2 flex justify-end items-end'><img src={Aimainimg} alt="" /></div>
                 </div>
             </section>
