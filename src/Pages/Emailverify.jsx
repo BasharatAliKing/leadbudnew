@@ -38,7 +38,7 @@ export default function Emailverify() {
           <input type="search" placeholder='' className='text-sm md:text-md outline-none p-2 bg-[#F5F5F5]  h-10 w-full' />
             <Link to="/" className='bg-gradient-to-r from-[#56F444] via-[#55EE44] to-[#48FA8A] text-black font-normal text-sm flex items-center justify-center md:text-md w-48 h-10'>Email Verifier</Link>
           </div>
-          <Link to="/" className='flex items-center gap-1 font-semibold border-2 duration-700 text-sm md:text-md border-black p-2 rounded-md sm:mr-auto'> <img src={EmailImg} alt="" />Upload your list for bulk verification </Link>
+          <Link to="/" className='flex items-center gap-1 font-normal border-2 duration-700 text-sm md:text-md border-black p-2 rounded-md sm:mr-auto'> <img src={EmailImg} alt="" />Upload your list for bulk verification </Link>
       </div>
      </section>
       {/* Dive In */}
