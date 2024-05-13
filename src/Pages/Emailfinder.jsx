@@ -74,7 +74,7 @@ export default function Emailfinder() {
               <ul>
                 {
                   result.map((val, id) => {
-                    return <li className='bg-[#F5F5F5] p-2 text-sm md:text-md font-normal border-2 border-b'>{val}</li>
+                    return <li className='bg-[#F5F5F5] p-2 text-sm md:text-md font-normal border-2 border-b border-r-0 border-l-0 border-t-0'>{val}</li>
 
                   })
                 }
