@@ -72,7 +72,7 @@ export default function Emailverify() {
              {
                 GeneralEmail.map((val,id)=>{
                     return  <div className='flex flex-col gap-3'>
-                    <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> <div className='font-medium'>{val.ques}</div><div>{val.ans}</div></div>
+                    <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> <div className='font-normal'>{val.ques}</div><div className='font-light'>{val.ans}</div></div>
                     </div>
                 })
              }

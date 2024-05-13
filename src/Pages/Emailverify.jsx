@@ -35,10 +35,10 @@ export default function Emailverify() {
       <div className='shadow-md bg-white rounded-md lg:w-3/4 p-5 md:p-10 my-10 mt-[-80px] flex flex-col gap-3 mx-auto'>
           <h3 className='text-black font-semibold text-lg text-center sm:text-start'>Elevate Your Inbox Credibility Instantly!</h3>
          <div className='rounded-md flex'>
-          <input type="search" placeholder='' className='text-sm md:text-md outline-none p-2 bg-[#F5F5F5]  h-10 w-full' />
-            <Link to="/" className='bg-gradient-to-r from-[#56F444] via-[#55EE44] to-[#48FA8A] text-black font-normal text-sm flex items-center justify-center md:text-md w-48 h-10'>Email Verifier</Link>
+          <input type="search" placeholder='abcd@xyz.com' className='text-sm md:text-md outline-none p-2 bg-[#F5F5F5]  h-10 w-full' />
+            <button className='bg-gradient-to-r from-[#56F444] via-[#55EE44] to-[#48FA8A] text-black font-normal text-sm flex items-center justify-center md:text-md w-48 h-10'>Email Verifier</button>
           </div>
-          <Link to="/" className='flex items-center gap-1 font-normal border-2 duration-700 text-[12px] md:text-[15px] md:text-md border-black p-2 rounded-md sm:mr-auto'> <img src={EmailImg} alt="" />Upload your list for bulk verification </Link>
+          <Link to="/emailverifier2" className='flex items-center gap-1 font-normal border-2 duration-700 text-[12px] md:text-[15px] md:text-md border-black p-2 rounded-md sm:mr-auto'> <img src={EmailImg} alt="" />Upload your list for bulk verification </Link>
       </div>
      </section>
       {/* Dive In */}
