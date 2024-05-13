@@ -48,6 +48,7 @@ export default function Emailfinder() {
     if (search.trim() === '') {
       setResult([]);
     }
+  
     const filteredEmails = Emails.filter(email => email.includes(search));
     setResult(filteredEmails);
   }
