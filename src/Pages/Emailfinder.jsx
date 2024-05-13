@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Sliderlogos from '../Components/Sliderlogos';
 import CustomersSlider from '../Components/CustomersSlider';
 import FrequentlyQuestion from '../Components/FrequentlyQuestion';
@@ -22,17 +22,40 @@ export default function Emailfinder() {
     { img: Img2, title: "Find Emails By Company", des: "Use our database to find just the companies you need by industry, company size, location, name and more." },
     { img: Img3, title: "Get Emails From Names", des: "Know your lead’s name and company domain but not their email? We can find it for you. Use this feature to complete your prospects lists." },
   ]
-  let Emails = [
-    { mail: "king@gmail.com" },
-    { mail: "king@gmail.com" },
-    { mail: "king@gmail.com" },
-    { mail: "king@gmail.com" },
+  // let Emails = [
+  //   { mail: "king@gmail.com" },
+  //   { mail: "king@gmail.com" },
+  //   { mail: "king@gmail.com" },
+  //   { mail: "king@gmail.com" },
+  // ]
+  const Emails = [
+    "king@gmail.com",
+    "king@gmail.com",
+    "lore@gmail.com",
+    "king@gmail.com",
   ]
+  const [search, setSearch] = useState('');
+  const [result, setResult] = useState([]);
+  const [datashow, setDatashow]=useState(false);
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+    console.log(e.target.value);
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setDatashow(true)
+    setSearch('');
+    if (search.trim() === '') {
+      setResult([]);
+    }
+    const filteredEmails = Emails.filter(email => email.includes(search));
+    setResult(filteredEmails);
+  }
   return (
     <>
       <section className='bg-bgmain bg-no-repeat  bg-center bg-cover  '>
         <div className='container flex flex-col gap-2 md:gap-3 py-10 pb-24 items-center justify-center'>
-          <img src={Emailfinderimg} alt="my-img"  className='w-[30%]' />
+          <img src={Emailfinderimg} alt="my-img" className='w-[30%]' />
           <div className='text-center'><Heading1 heading1="Email Finder" /></div>
           <p className='text-center sm:text-start font-normal text-[#030621] text-[12px] md:text-[15px]'>Discover the Unseen: Your Ultimate Email Finder Tool Awaits!</p>
         </div>
@@ -40,23 +63,26 @@ export default function Emailfinder() {
       <section className='container'>
         <div className='shadow-md bg-white rounded-md lg:w-3/4 p-5 md:p-10 my-10 mt-[-80px] flex flex-col gap-3 mx-auto'>
           <h3 className='text-black font-semibold text-lg text-center sm:text-start'>Unlock Inboxes: Find Any Email Instantly With Our Tool!</h3>
-          <div className='rounded-md flex h-16  '>
-            <input type="search" placeholder='companyname.com' className='text-sm md:text-md outline-none p-2 bg-[#F5F5F5] h-10 w-full' />
-            <Link to="/" className='bg-gradient-to-r from-[#56F444] via-[#55EE44] to-[#48FA8A] text-black text-sm md:text-md flex items-center justify-center w-48 h-10'>Find Email</Link>
-          </div>
+          <form onSubmit={handleSubmit} className='rounded-md flex h-16  '>
+            <input type="search" value={search} onChange={handleChange} placeholder='companyname.com' className='text-sm md:text-md outline-none p-2 bg-[#F5F5F5] h-10 w-full' />
+            <button className='bg-gradient-to-r from-[#56F444] via-[#55EE44] to-[#48FA8A] text-black text-sm md:text-md flex items-center justify-center w-48 h-10'>Find Email</button>
+          </form>
+           { 
+           datashow ?
           <div className='flex flex-col gap-3'>
-            <ul>
-              {
-                Emails.map((val, id) => {
-                  return <li className='bg-[#F5F5F5] p-2 text-sm md:text-md font-normal border-2 border-b'>{val.mail}</li>
+              <ul>
+                {
+                  result.map((val, id) => {
+                    return <li className='bg-[#F5F5F5] p-2 text-sm md:text-md font-normal border-2 border-b'>{val}</li>
 
-                })
-              }
-            </ul>
-            <p className='text-sm md:text-md font-normal text-center lg:w-3/4 mx-auto'>Sign up to see all email addresses found for this domain
-              and receive <b> 50 free email searches/month.</b></p>
-            <Link to="/" className='flex justify-center text-center '><Button2 btn2="Get Your Free Leadbud.Io Account" /></Link>
-          </div>
+                  })
+                }
+              </ul>
+              <p className='text-sm md:text-md font-normal text-center lg:w-3/4 mx-auto'>Sign up to see all email addresses found for this domain
+                and receive <b> 50 free email searches/month.</b></p>
+              <Link to="/" className='flex justify-center text-center '><Button2 btn2="Get Your Free Leadbud.Io Account" /></Link>
+            </div> 
+            : null}
         </div>
 
       </section>
