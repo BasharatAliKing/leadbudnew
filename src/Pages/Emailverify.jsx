@@ -15,6 +15,7 @@ import Footer from '../Layouts/Footer';
 import FrequentlyQuestion from '../Components/FrequentlyQuestion';
 import CustomersSlider from '../Components/CustomersSlider';
 import Ignitegrowth from "../Utilities/ignitegrowth.png";
+import Button3 from '../Components/Button3';
 export default function Emailverify() {
   let Divein=[
     {img:Img1 , title:"Syntax Check", des:"Identify and eliminate errors with a thorough syntax examination, maintaining the integrity of your contact list."},
@@ -24,18 +25,18 @@ export default function Emailverify() {
     return (
     <>
      <section className='bg-bgmain bg-no-repeat  bg-center bg-cover  '>
-    <div className='container flex flex-col gap-2 md:gap-3 h-screen items-center justify-center'>
-      <img src={EmailVerifyimg} alt="" />
+    <div className='container flex flex-col gap-2 md:gap-3  py-10 pb-24 items-center justify-center'>
+      <img src={EmailVerifyimg} alt="my-img" className='w-[30%]' />
     <div className='text-center'><Heading1 heading1="Email Verifier" /></div>
    <div className='text-center sm:text-start'>  <Para1 para1="Ensure Deliverability, Boost Confidence with Email Verification Excellence" /></div>
     </div>
     </section>
     <section className='container'>
-      <div className='shadow-md bg-white rounded-md lg:w-3/4 p-10 my-10 md:my-0 md:mt-[-50px] flex flex-col gap-3 mx-auto'>
+      <div className='shadow-md bg-white rounded-md lg:w-3/4 p-5 md:p-10 my-10 mt-[-80px] flex flex-col gap-3 mx-auto'>
           <h3 className='text-black font-semibold text-lg text-center sm:text-start'>Elevate Your Inbox Credibility Instantly!</h3>
          <div className='rounded-md flex'>
-          <input type="text" placeholder='' className='text-sm md:text-md outline-none p-2 bg-slate-300 h-10 w-full focus:ring-1 focus:border-black' />
-            <Link to="/" className='bg-bgmain text-black font-semibold text-sm flex items-center justify-center md:text-md w-48 h-10'>Email Verifier</Link>
+          <input type="search" placeholder='' className='text-sm md:text-md outline-none p-2 bg-[#F5F5F5]  h-10 w-full' />
+            <Link to="/" className='bg-gradient-to-r from-[#56F444] via-[#55EE44] to-[#48FA8A] text-black font-normal text-sm flex items-center justify-center md:text-md w-48 h-10'>Email Verifier</Link>
           </div>
           <Link to="/" className='flex items-center gap-1 font-semibold border-2 duration-700 text-sm md:text-md border-black p-2 rounded-md sm:mr-auto'> <img src={EmailImg} alt="" />Upload your list for bulk verification </Link>
       </div>
@@ -50,7 +51,7 @@ export default function Emailverify() {
                   return (
                    <div className='text-center sm:text-start flex flex-col gap-3 mt-3 md:mt-5 p-5'>
                       <img className='mx-auto sm:mx-0 h-16 w-16' src={val.img} alt='my-img'/>
-                    <h4 className='text-[20px] md:text-xl font-semibold '>{val.title}</h4>
+                    <h4 className='text-[20px] md:text-xl font-medium '>{val.title}</h4>
                     <p className='text-sm md:text-md text-para'>{val.des}</p>
                     </div>
                   )
@@ -68,7 +69,7 @@ export default function Emailverify() {
        <section className=' bg-[#F5F5F5] '>
         <div className='container flex flex-col md:flex-row py-10 md:py-16 gap-3'>
         <div className='md:w-1/2 relative'> <Link to="/" className='absolute top-6 right-0 bg-black text-white rounded-full p-2 px-5 shadow-md text-sm md:text-md font-semibold'>Detailed Reporting</Link> <img src={Unleash} alt="" /></div>
-        <div className='md:w-1/2 md:p-10 flex flex-col gap-3'>
+        <div className='md:w-1/2 md:p-10 flex flex-col justify-center gap-3'>
           <Heading1 heading1="Unleash Potential: Click For Success Now!" />
           <Para1 para1="Don't Miss Out—Click Now To Experience The Transformation Your Business Deserves."/>
           <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>
@@ -77,8 +78,8 @@ export default function Emailverify() {
             <li className='flex gap-1 items-center font-normal'><FaCheckCircle className='text-green'/> Detailed Reporting</li>
             <li className='flex gap-1 items-center font-normal'><FaCheckCircle className='text-green'/> 24/7 Support</li>
           </ul>
-          <Link to="/" className='bg-bgmain text-black mr-auto text- font-semibold text-sm px-8 py-3 rounded-md md:text-lg'>Start to Free</Link>
-        </div>
+          <Link to="/" className='mr-auto'><Button3 btn3="Start to Free" /></Link>
+         </div>
         </div> 
       </section>
        {/* Ignite Growth */}

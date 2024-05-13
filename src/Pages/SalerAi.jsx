@@ -47,9 +47,9 @@ export default function B2bdatabase() {
     return (
         <>
             <section className='bg-bgmain bg-no-repeat  bg-center bg-cover  '>
-                <div className='salesai container flex flex-col md:flex-row gap-2 md:gap-3 pt-10 md:py-0 h-auto md:h-screen'>
+                <div className='container flex flex-col md:flex-row gap-2 md:gap-3 '>
                     <div className='md:w-1/2 flex flex-col justify-center gap-3'>
-                        <h3 className='text-[25px] md:text-[30px] lg:text-[33px] font-normal'>Hi, I'm Cara, <br/> Your <b>AI Sales Agent</b></h3>
+                        <h3 className='text-[25px] md:text-[30px] lg:text-[33px] font-light'>Hi, I'm Cara, <br/> Your <b className='font-medium'>AI Sales Agent</b></h3>
                     <ul className='flex flex-col gap-3'>
                         <li className='flex flex-wrap items-center gap-2 text-[12px] md:text-[14px]'> <FaCheckCircle className='text-[14px] md:text-[16px]'/> I Search 
                         <div className='flex items-center gap-1 font-normal text-[12px] md:text-[15px]'><img src={LinkedinImg} alt='my-img' />Linkedin</div>

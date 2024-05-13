@@ -11,7 +11,7 @@ export default function CustomerReview(props) {
             <div className='flex flex-col sm:flex-row text-center sm:text-start gap-2 mx-auto sm:mx-0'>
                 <img src={props.customerimg} className='h-[70px] w-[70px] mx-auto sm:mx-0' alt="my-img" />
                 <div className='flex flex-col justify-center'>
-                    <h4 className='text-[20px] sm:text-[22px] font-semibold'>{props.heading}</h4>
+                    <h4 className='text-[20px] sm:text-[22px] font-medium'>{props.heading}</h4>
                     <p className='text-[14px] sm:text-[15px] font-light'>{props.subheading}</p>
                 </div>
             </div>

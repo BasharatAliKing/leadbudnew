@@ -32,18 +32,18 @@ export default function B2bdatabase() {
   return (
    <>
     <section className='bg-bgmain bg-no-repeat  bg-center bg-cover  '>
-    <div className=' container flex flex-col gap-2 md:gap-3 h-screen items-center justify-center'>
+    <div className=' container flex flex-col gap-2 md:gap-3 py-10 pb-24 md:pb-32 items-center justify-center'>
     <div className='text-center'><Heading1 heading1="Unlock the Power of Our B2B Database" /></div>
      <Heading2 heading2="50M Companies & 500M Contacts" />
     <Link to="/"> <Button1 btn1="Try free B2B Database" /></Link>
       <ul className='flex flex-wrap gap-3 md:gap-5'>
-        <li className='flex items-center mx-auto sm:mx-0 font-medium gap-1'><HiMiniCheckBadge /> Real-time email verifications</li>
-        <li className='flex items-center mx-auto sm:mx-0 font-medium gap-1'><HiMiniCheckBadge /> More than 15 filtering options</li>
-        <li className='flex items-center mx-auto sm:mx-0 font-medium gap-1'><HiMiniCheckBadge /> New Load Alerts</li>
+        <li className='flex items-center text-center text-[12px] md:text-[15px] mx-auto sm:mx-0 font-normal gap-1'><HiMiniCheckBadge /> Real-time email verifications</li>
+        <li className='flex items-center text-center text-[12px] md:text-[15px] mx-auto sm:mx-0 font-normal gap-1'><HiMiniCheckBadge /> More than 15 filtering options</li>
+        <li className='flex items-center text-center text-[12px] md:text-[15px] mx-auto sm:mx-0 font-normal gap-1'><HiMiniCheckBadge /> New Load Alerts</li>
       </ul>
     </div>
     </section>
-    <div className='lg:w-3/4 container mx-auto py-10 md:mt-[-200px]'>
+    <div className='lg:w-3/4 container mx-auto mt-[-80px] md:mt-[-120px]'>
       <img src={HomeImg} alt="my-img" />
     </div>
     {/* Strategy starts here */}
@@ -51,39 +51,38 @@ export default function B2bdatabase() {
      <div className=' mx-auto text-center leading-tight'>
      <Heading1 heading1="Elevate Your Strategy With Cutting-Edge Database Capabilities!" />
      </div>
-     <div className='grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-3'>
+     <div className='grid grid-cols-2  lg:grid-cols-3 gap-3'>
         <div className='flex flex-col items-center justify-center'>
           <div className='text-green'><Heading1 heading1="50M"/></div>
-          <Para1 para1="Companies" /> 
+         <p className='text-[12px] md:text-[15px] text-para font-normal text-center'>Companies</p>
         </div>
         <div className='flex flex-col items-center justify-center'>
           <div className='text-green'><Heading1 heading1="$12B"/></div>
-          <Para1 para1="Market Valuation" /> 
+          <p className='text-[12px] md:text-[15px] text-para font-normal text-center'>Market Valuation</p> 
         </div>
         <div className='flex flex-col items-center justify-center'>
           <div className='text-green'><Heading1 heading1="500M"/></div>
-          <Para1 para1="Contacts" /> 
-        </div>
+          <p className='text-[12px] md:text-[15px] text-para font-normal text-center'>Contacts</p>        </div>
         <div className='flex flex-col items-center justify-center'>
           <div className='text-green'><Heading1 heading1="3.5M"/></div>
-          <Para1 para1="Active Users" /> 
+          <p className='text-[12px] md:text-[15px] text-para font-normal text-center'>Active Users</p>
         </div>
         <div className='flex flex-col items-center justify-center'>
           <div className='text-green'><Heading1 heading1="25%"/></div>
-          <Para1 para1="Reduction in Operational Costs" /> 
+          <p className='text-[12px] md:text-[15px] text-para font-normal text-center'>Reduction in  Costs</p>
         </div>
         <div className='flex flex-col items-center justify-center'>
           <div className='text-green'><Heading1 heading1="80%"/></div>
-          <Para1 para1="Customer Retention Rate" /> 
+          <p className='text-[12px] md:text-[15px] text-para font-normal text-center'>Customer Retention Rate</p>
         </div>
      </div>
     </section>
     {/* Beyond Leads */}
     <section className=' bg-[#F5F5F5]  '>
-     <div className='container py-16 flex flex-col md:flex-row'>
+     <div className='container py-16 flex flex-col md:flex-row items-center'>
      <div className='md:w-1/2 flex flex-col gap-3'>
        <div className='leading-snug text-center sm:text-start'>
-       <Heading1 heading1="Beyond Leads: Unleash The Full Power Of Leadbud.Io!" />
+      <div className='md:w-3/4'> <Heading1 heading1="Beyond Leads: Unleash The Full Power Of Leadbud.Io!" /></div>
        </div>
        <Mediaobject img={<HiMiniCheckBadge />} mediaheading="Market Insights"  para="Dive Deep Into Market Trends And Gain Valuable Insights To Stay Ahead Of The Competition." />
        <Mediaobject img={<HiMiniCheckBadge />} mediaheading="Market Insights"  para="Dive Deep Into Market Trends And Gain Valuable Insights To Stay Ahead Of The Competition." />
@@ -97,7 +96,7 @@ export default function B2bdatabase() {
     {/* Unvelling section here */}
     <section className='container py-16'>
      <div className='md:w-3/4 text-center mx-auto leading-snug'>
-     <Heading1 heading1="Unveiling Excellence: Features That Redefine Possibilities!" />
+   <div className='md:w-3/4 text-center mx-auto'>  <Heading1 heading1="Unveiling Excellence: Features That Redefine Possibilities!" /></div>
      </div>
      <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 mt-5'>
        {

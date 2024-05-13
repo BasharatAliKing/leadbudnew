@@ -31,7 +31,7 @@ export default function FrequentlyQuestion() {
                 return(
                  <div className='bg-white p-5 rounded-md shadow-md text-start'>
 <div key={index} onClick={() => toggleAnswer(index)} className='flex justify-between'>
-                    <h5 className='text-sm sm:text-md md:text-lg font-semibold'>{val.ques}</h5>
+                    <h5 className='text-sm sm:text-md md:text-lg font-medium'>{val.ques}</h5>
                    { icon ?  <FaChevronDown className='text-green ml-3' />: <FaChevronUp className='text-green ml-3' />   }
           </div>
              <div className='md:w-3/4'> <Para1 para1={visibleIndex === index && <div>{val.ans}</div>}/></div>

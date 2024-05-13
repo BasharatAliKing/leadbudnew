@@ -48,19 +48,19 @@ export default function B2bdatabase() {
   return (
    <>
     <section className='bg-bgmain bg-no-repeat  bg-center bg-cover  '>
-    <div className='container flex flex-col gap-2 md:gap-3 h-screen items-center justify-center'>
+    <div className='container flex flex-col gap-2 md:gap-3 py-10 pb-24 md:pb-32 items-center justify-center'>
     <div className='text-center'><Heading1 heading1="Facebook Fanpage Extractor" /></div>
    <div className='text-center md:w-3/4'> <Para1 para1="Integrate Muzzleads data effortlessly into your marketing and sales strategies for a lead boost. Elevate
                   campaigns and achieve superior conversions with seamless data utilization." /></div>
     <Link to="/"> <Button1 btn1="Try it Now" /></Link>
       <ul className='flex flex-wrap gap-3 md:gap-5'>
-        <li className='flex items-center mx-auto sm:mx-0 font-medium gap-1'><HiMiniCheckBadge /> Real-time email verifications</li>
-        <li className='flex items-center mx-auto sm:mx-0 font-medium gap-1'><HiMiniCheckBadge /> More than 15 filtering options</li>
-        <li className='flex items-center mx-auto sm:mx-0 font-medium gap-1'><HiMiniCheckBadge /> New Load Alerts</li>
+        <li className='flex items-center text-center text-[12px] md:text-[15px] mx-auto sm:mx-0 font-normal gap-1'><HiMiniCheckBadge /> Real-time email verifications</li>
+        <li className='flex items-center text-center text-[12px] md:text-[15px] mx-auto sm:mx-0 font-normal gap-1'><HiMiniCheckBadge /> More than 15 filtering options</li>
+        <li className='flex items-center text-center text-[12px] md:text-[15px] mx-auto sm:mx-0 font-normal gap-1'><HiMiniCheckBadge /> New Load Alerts</li>
       </ul>
     </div>
     </section>
-    <div className='lg:w-3/4 container mx-auto py-10 md:mt-[-200px]'>
+    <div className='lg:w-3/4 container mx-auto py-10 mt-[-120px] md:mt-[-150px]'>
       <img src={FacebookImg} alt="my-img" />
     </div>
      {/* Facebook post */}
@@ -140,7 +140,7 @@ export default function B2bdatabase() {
               {
                  DiscoverFb.map((val,id)=>{
                   return (
-                   <div className='text-center sm:text-start flex flex-col gap-3 mt-3 md:mt-5 p-5'>
+                   <div className='text-center sm:text-start flex flex-col gap-2 mt-3 md:mt-5 p-5'>
                       <img className='mx-auto sm:mx-0 h-24 w-24' src={val.img} alt='my-img'/>
                     <h4 className='text-[18px] md-text-[20px] font-medium '>{val.title}</h4>
                     <p className='text-[12px] md:text-[15px] text-para'>{val.des}</p>
@@ -161,7 +161,7 @@ export default function B2bdatabase() {
                   return (
                    <div className='text-center sm:text-start flex flex-col gap-3 mt-3 md:mt-5 p-5'>
                     <div className='bg-green p-2 rounded-full mx-auto text-[30px]'>{val.img}</div>
-                    <p className='text-[12px] md:text-[15px] text-para text-center'>{val.title}</p>
+                    <p className='text-[12px] md:text-[15px] lg:w-3/4 mx-auto text-para text-center'>{val.title}</p>
                     </div>
                   )
                  })
