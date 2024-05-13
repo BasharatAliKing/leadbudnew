@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import EmailVerifyimg from "../Utilities/EmailVerifyimg.png";
 import Heading1 from '../Components/Heading1';
 import Para1 from '../Components/Para1';
@@ -22,6 +22,38 @@ export default function Emailverify() {
     {img:Img2 , title:"Domain Verification", des:"Ensure emails are linked to valid domains, enhancing the reliability of your communication channels."},
     {img:Img3 , title:"Anti-Spam Checks", des:"Boost deliverability by avoiding spam traps, safeguarding your emails from being flagged as spam."},
   ]
+  let GeneralEmail=[
+    {ques:"Full Name", ans:"ABCD"},
+    {ques:"Gender", ans:"Male"},
+    {ques:"State", ans:"Deliverable"},
+    {ques:"Reason", ans:"Acceptable"},
+    {ques:"Domain", ans:"xyz.com"},
+    {ques:"User", ans:"XYZ."},
+    {ques:"Did you Mean ?", ans:"Did you Mean ?"},
+  ]
+  let Attributes=[
+    {ques:"Accept-all", ans:"No"},
+    {ques:"Accept-all", ans:"No"},
+    {ques:"Accept-all", ans:"No"},
+    {ques:"Accept-all", ans:"No"},
+    {ques:"Accept-all", ans:"No"},
+  ]
+  let MailServer=[
+    {ques:"SMTP Provider", ans:"GOOGLE"},
+    {ques:"SMTP Provider", ans:"GOOGLE"},
+  ]
+  const [search, setSearch] = useState('');
+  const [datashow, setDatashow]=useState(true);
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+    console.log(e.target.value);
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setDatashow(false)
+    setSearch('');
+    
+  }
     return (
     <>
      <section className='bg-bgmain bg-no-repeat  bg-center bg-cover  '>
@@ -34,12 +66,64 @@ export default function Emailverify() {
     <section className='container'>
       <div className='shadow-md bg-white rounded-md lg:w-3/4 p-5 md:p-10 my-10 mt-[-80px] flex flex-col gap-3 mx-auto'>
           <h3 className='text-black font-semibold text-lg text-center sm:text-start'>Elevate Your Inbox Credibility Instantly!</h3>
-         <div className='rounded-md flex'>
-          <input type="search" placeholder='abcd@xyz.com' className='text-sm md:text-md outline-none p-2 bg-[#F5F5F5]  h-10 w-full' />
-            <button className='bg-gradient-to-r from-[#56F444] via-[#55EE44] to-[#48FA8A] text-black font-normal text-sm flex items-center justify-center md:text-md w-48 h-10'>Email Verifier</button>
+          <form onSubmit={handleSubmit} className='rounded-md flex h-16  '>
+            <input type="search" value={search} onChange={handleChange} placeholder='companyname.com' className='text-sm md:text-md outline-none p-2 bg-[#F5F5F5] h-10 w-full' />
+            <button className='bg-gradient-to-r from-[#56F444] via-[#55EE44] to-[#48FA8A] text-black text-sm md:text-md flex items-center justify-center w-48 h-10'>Find Email</button>
+          </form>
+        {
+          datashow?null:
+          <div>
+          <div className='w-[100%] h-[2px] rounded-full flex mt-5 '>
+             <div className='bg-[#4A44F4] ml-[-5px] rounded-full w-[10%] h-[10px] text-transparent'>.</div>
+             <div className='bg-[#FF4646] ml-[-5px] rounded-r-full w-[20%] h-[10px] text-transparent'>.</div>
+             <div className='bg-[#56F444] ml-[-5px] rounded-r-full w-[55%] h-[10px] text-transparent'>.</div>
+             <div className='bg-[#FFF713] ml-[-5px] rounded-r-full w-[25%] h-[10px] text-transparent'>.</div>
           </div>
-          <Link to="/emailverifier2" className='flex items-center gap-1 font-normal border-2 duration-700 text-[12px] md:text-[15px] md:text-md border-black p-2 rounded-md sm:mr-auto'> <img src={EmailImg} alt="" />Upload your list for bulk verification </Link>
-      </div>
+          {/* table */}
+          <div className='grid grid-cols-1 mt-5 lg:grid-cols-3 bg-[#F5F5F5]'>
+            <div className='flex flex-col gap-3  border-l-0 border-b-2 border-r-0 lg:border-r-2  lg:border-b-0 border-t-0 p-3'>
+               <h3 className='text-[17px] sm:text-[19px] font-semibold'>General</h3>
+              <div>
+             {
+                GeneralEmail.map((val,id)=>{
+                    return  <div className='flex flex-col gap-3'>
+                    <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> <div className='font-normal'>{val.ques}</div><div className='font-light'>{val.ans}</div></div>
+                    </div>
+                })
+             }
+              </div>
+            </div>
+            <div className='flex flex-col gap-3 border-l-0 border-b-2 border-r-0 lg:border-r-2  lg:border-b-0 border-t-0 p-3'>
+               <h3 className='text-[17px] sm:text-[19px] font-semibold'>Attributes</h3>
+              <div>
+             {
+                Attributes.map((val,id)=>{
+                    return  <div className='flex flex-col gap-3'>
+                    <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> <div className='font-medium'>{val.ques}</div><div>{val.ans}</div></div>
+                    </div>
+                })
+             }
+              </div>
+            </div>
+            <div className='flex flex-col gap-3  p-3'>
+               <h3 className='text-[17px] sm:text-[19px] font-semibold'>Mail Server</h3>
+              <div>
+             {
+                MailServer.map((val,id)=>{
+                    return  <div className='flex flex-col gap-3'>
+                    <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> <div className='font-medium'>{val.ques}</div><div>{val.ans}</div></div>
+                    </div>
+                })
+             }
+              </div>
+            </div>
+          </div>
+          </div>
+        }
+        {
+          datashow?  <Link to="/emailverifier2" className='flex items-center gap-1 font-normal border-2 duration-700 text-[12px] md:text-[15px] md:text-md border-black p-2 rounded-md sm:mr-auto'> <img src={EmailImg} alt="" />Upload your list for bulk verification </Link>
+     : null
+        } </div>
      </section>
       {/* Dive In */}
       <section className='bg-[#F5F5F5] mt-10'>
