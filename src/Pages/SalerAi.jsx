@@ -48,7 +48,7 @@ export default function B2bdatabase() {
         <>
             <section className='bg-bgmain bg-no-repeat  bg-center bg-cover  '>
                 <div className='container flex flex-col md:flex-row gap-2 md:gap-3 '>
-                    <div className='md:w-1/2 flex flex-col justify-center gap-3'>
+                    <div className='md:w-1/2 flex flex-col justify-center gap-3 mt-10'>
                         <h3 className='text-[25px] md:text-[30px] lg:text-[33px] font-light'>Hi, I'm Cara, <br/> Your <b className='font-medium'>AI Sales Agent</b></h3>
                     <ul className='flex flex-col gap-3'>
                         <li className='flex flex-wrap items-center gap-2 text-[12px] md:text-[14px]'> <FaCheckCircle className='text-[14px] md:text-[16px]'/> I Search 
