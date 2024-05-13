@@ -34,7 +34,7 @@ export default function CustomersSlider() {
      <Slider className='flex gap-3 ' {...settings}>
       <CustomerReview customerimg={Customer1} heading="Travis Bradly" subheading="ABC Company" para="LeadBud has been a game-changer It's incredibly user-friendly, and the automation features have saved us a ton of time.Our lead generation has never been more efficient!" />
       <CustomerReview customerimg={Customer2} heading="Miska Randhawa" subheading="ABC Company" para="LeadBud helped us increase our leads by 40% in just a few months. The A/B testing feature helped us fine-tune our strategies, and the support team is always responsive." />
-      <CustomerReview customerimg={Customer3} heading="Khosa Jagdeep" subheading="ABC Company" para="As a small business owner, LeadBud has been a lifesaver. The free trial allowed me to see the value upfront, and I was sold, easy to use, and the results speak for themselves." />
+      <CustomerReview customerimg={Customer3} heading="Khosa Jagdeep" subheading="ABC Company" para="As a small business owner, LeadBud has been a lifesaver. The free trial allowed me to see the value upfront, and I was sold, and the results speak for themselves." />
     
      </Slider>
     </>
