@@ -22,17 +22,11 @@ export default function Emailfinder() {
     { img: Img2, title: "Find Emails By Company", des: "Use our database to find just the companies you need by industry, company size, location, name and more." },
     { img: Img3, title: "Get Emails From Names", des: "Know your lead’s name and company domain but not their email? We can find it for you. Use this feature to complete your prospects lists." },
   ]
-  // let Emails = [
-  //   { mail: "king@gmail.com" },
-  //   { mail: "king@gmail.com" },
-  //   { mail: "king@gmail.com" },
-  //   { mail: "king@gmail.com" },
-  // ]
   const Emails = [
-    "king@gmail.com",
-    "king@gmail.com",
+    "umer@gmail.com",
+    "umer@gmail.com",
     "lore@gmail.com",
-    "king@gmail.com",
+    "umer@gmail.com",
   ]
   const [search, setSearch] = useState('');
   const [result, setResult] = useState([]);
@@ -48,7 +42,6 @@ export default function Emailfinder() {
     if (search.trim() === '') {
       setResult([]);
     }
-  
     const filteredEmails = Emails.filter(email => email.includes(search));
     setResult(filteredEmails);
   }
