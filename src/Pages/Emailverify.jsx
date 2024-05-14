@@ -16,6 +16,7 @@ import FrequentlyQuestion from '../Components/FrequentlyQuestion';
 import CustomersSlider from '../Components/CustomersSlider';
 import Ignitegrowth from "../Utilities/ignitegrowth.png";
 import Button3 from '../Components/Button3';
+import { IoIosCloseCircleOutline } from "react-icons/io";
 export default function Emailverify() {
   let Divein=[
     {img:Img1 , title:"Syntax Check", des:"Identify and eliminate errors with a thorough syntax examination, maintaining the integrity of your contact list."},
@@ -52,7 +53,10 @@ export default function Emailverify() {
     e.preventDefault();
     setDatashow(false)
     setSearch('');
-    
+  }
+  const handleClose=(e)=>{
+    e.preventDefault();
+    setDatashow(true);
   }
     return (
     <>
@@ -73,6 +77,8 @@ export default function Emailverify() {
         {
           datashow?null:
           <div>
+              <button onClick={handleClose}  className='ml-auto flex gap-1 items-center'><IoIosCloseCircleOutline className='text-[16px] md:text-[20px]' /> Close</button>
+           
           <div className='w-[100%] h-[2px] rounded-full flex mt-5 '>
              <div className='bg-[#4A44F4] ml-[-5px] rounded-full w-[10%] h-[10px] text-transparent'>.</div>
              <div className='bg-[#FF4646] ml-[-5px] rounded-r-full w-[20%] h-[10px] text-transparent'>.</div>

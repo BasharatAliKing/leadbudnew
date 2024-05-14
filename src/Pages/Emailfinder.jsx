@@ -16,6 +16,7 @@ import DiscoverContact from "../Utilities/discovercontacts.png"
 import { Link } from "react-router-dom";
 import Button3 from '../Components/Button3';
 import Button2 from '../Components/Button2';
+import { IoIosCloseCircleOutline } from "react-icons/io";
 export default function Emailfinder() {
   let LostEmail = [
     { img: Img1, title: "Find Email By Domain", des: "Find all email addresses on any domain in a matter of minutes. Bulk domain option is handy if you want to explore up to 20,000 domains at a time." },
@@ -42,15 +43,15 @@ export default function Emailfinder() {
     setEmailArray(newArray);
   };
 
-  // const handleChange = (e) => {
-  //   e.preventDefault();
-  //   setEmail(e.target.value);
-  //   console.log(e.target.value);
-  // }
+  const handleChange = (e) => {
+    e.preventDefault();
+    setEmail(e.target.value);
+   // console.log(e.target.value);
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
     setDatashow(true)
-    setSearch('');
+     setEmail('');
     const newArray = [];
     for (let i = 1; i <= 4; i++) {
       newArray.push(email + i);
@@ -61,6 +62,10 @@ export default function Emailfinder() {
     // }
     // const filteredEmails = Emails.filter(email => email.includes(search));
     // setResult(filteredEmails);
+  }
+  const handleClose=(e)=>{
+    e.preventDefault();
+    setDatashow(false);
   }
   return (
     <>
@@ -75,12 +80,13 @@ export default function Emailfinder() {
         <div className='shadow-md bg-white rounded-md lg:w-3/4 p-5 md:p-10 my-10 mt-[-80px] flex flex-col gap-3 mx-auto'>
           <h3 className='text-black font-semibold text-lg text-center sm:text-start'>Unlock Inboxes: Find Any Email Instantly With Our Tool!</h3>
           <form onSubmit={handleSubmit} className='rounded-md flex h-16  '>
-            <input type="search" value={email} onChange={(e) => setEmail(e.target.value)}  placeholder='companyname.com' className='text-sm md:text-md outline-none p-2 bg-[#F5F5F5] h-10 w-full' />
+            <input type="search" value={email} onChange={handleChange}  placeholder='companyname.com' className='text-sm md:text-md outline-none p-2 bg-[#F5F5F5] h-10 w-full' />
             <button className='bg-gradient-to-r from-[#56F444] via-[#55EE44] to-[#48FA8A] text-black text-sm md:text-md flex items-center justify-center w-48 h-10'>Find Email</button>
           </form>
            { 
            datashow ?
           <div className='flex flex-col gap-3'>
+            <button onClick={handleClose}  className='ml-auto flex gap-1 items-center'><IoIosCloseCircleOutline className='text-[16px] md:text-[20px]' /> Close</button>
               <ul>
                 {
                 emailArray.map((val, index) => (
