@@ -31,19 +31,36 @@ export default function Emailfinder() {
   const [search, setSearch] = useState('');
   const [result, setResult] = useState([]);
   const [datashow, setDatashow]=useState(false);
-  const handleChange = (e) => {
-    setSearch(e.target.value);
-    console.log(e.target.value);
-  }
+  const [email, setEmail] = useState('');
+  const [emailArray, setEmailArray] = useState([]);
+
+  const generateEmailArray = () => {
+    const newArray = [];
+    for (let i = 1; i <= 4; i++) {
+      newArray.push(email + i);
+    }
+    setEmailArray(newArray);
+  };
+
+  // const handleChange = (e) => {
+  //   e.preventDefault();
+  //   setEmail(e.target.value);
+  //   console.log(e.target.value);
+  // }
   const handleSubmit = (e) => {
     e.preventDefault();
     setDatashow(true)
     setSearch('');
-    if (search.trim() === '') {
-      setResult([]);
+    const newArray = [];
+    for (let i = 1; i <= 4; i++) {
+      newArray.push(email + i);
     }
-    const filteredEmails = Emails.filter(email => email.includes(search));
-    setResult(filteredEmails);
+    setEmailArray(newArray);
+    // if (search.trim() === '') {
+    //   setResult([]);
+    // }
+    // const filteredEmails = Emails.filter(email => email.includes(search));
+    // setResult(filteredEmails);
   }
   return (
     <>
@@ -58,7 +75,7 @@ export default function Emailfinder() {
         <div className='shadow-md bg-white rounded-md lg:w-3/4 p-5 md:p-10 my-10 mt-[-80px] flex flex-col gap-3 mx-auto'>
           <h3 className='text-black font-semibold text-lg text-center sm:text-start'>Unlock Inboxes: Find Any Email Instantly With Our Tool!</h3>
           <form onSubmit={handleSubmit} className='rounded-md flex h-16  '>
-            <input type="search" value={search} onChange={handleChange} placeholder='companyname.com' className='text-sm md:text-md outline-none p-2 bg-[#F5F5F5] h-10 w-full' />
+            <input type="search" value={email} onChange={(e) => setEmail(e.target.value)}  placeholder='companyname.com' className='text-sm md:text-md outline-none p-2 bg-[#F5F5F5] h-10 w-full' />
             <button className='bg-gradient-to-r from-[#56F444] via-[#55EE44] to-[#48FA8A] text-black text-sm md:text-md flex items-center justify-center w-48 h-10'>Find Email</button>
           </form>
            { 
@@ -66,11 +83,12 @@ export default function Emailfinder() {
           <div className='flex flex-col gap-3'>
               <ul>
                 {
-                  result.map((val, id) => {
-                    return <li className='bg-[#F5F5F5] p-2 text-sm md:text-md font-normal border-2 border-b border-r-0 border-l-0 border-t-0'>{val}</li>
+                emailArray.map((val, index) => (
 
-                  })
-                }
+                     <li className='bg-[#F5F5F5] p-2 text-sm md:text-md font-normal border-2 border-b border-r-0 border-l-0 border-t-0'>{val}</li>
+
+                  ))}
+
               </ul>
               <p className='text-sm md:text-md font-normal text-center lg:w-3/4 mx-auto'>Sign up to see all email addresses found for this domain
                 and receive <b> 50 free email searches/month.</b></p>
