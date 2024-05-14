@@ -23,25 +23,25 @@ export default function Emailfinder() {
     { img: Img2, title: "Find Emails By Company", des: "Use our database to find just the companies you need by industry, company size, location, name and more." },
     { img: Img3, title: "Get Emails From Names", des: "Know your lead’s name and company domain but not their email? We can find it for you. Use this feature to complete your prospects lists." },
   ]
-  const Emails = [
-    "umer@gmail.com",
-    "umer@gmail.com",
-    "lore@gmail.com",
-    "umer@gmail.com",
-  ]
-  const [search, setSearch] = useState('');
-  const [result, setResult] = useState([]);
+  // const Emails = [
+  //   "umer@gmail.com",
+  //   "umer@gmail.com",
+  //   "lore@gmail.com",
+  //   "umer@gmail.com",
+  // ]
+  // const [search, setSearch] = useState('');
+  // const [result, setResult] = useState([]);
   const [datashow, setDatashow]=useState(false);
   const [email, setEmail] = useState('');
   const [emailArray, setEmailArray] = useState([]);
 
-  const generateEmailArray = () => {
-    const newArray = [];
-    for (let i = 1; i <= 4; i++) {
-      newArray.push(email + i);
-    }
-    setEmailArray(newArray);
-  };
+  // const generateEmailArray = () => {
+  //   const newArray = [];
+  //   for (let i = 1; i <= 4; i++) {
+  //     newArray.push(email + i);
+  //   }
+  //   setEmailArray(newArray);
+  // };
 
   const handleChange = (e) => {
     e.preventDefault();
