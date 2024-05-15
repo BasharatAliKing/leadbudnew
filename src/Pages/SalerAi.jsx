@@ -62,11 +62,11 @@ export default function B2bdatabase() {
                         <li className='flex flex-wrap items-center gap-2 text-[12px] md:text-[14px]'><FaCheckCircle className='text-[14px] md:text-[16px]' /> Next, I'll send them with your
                         <div className='flex items-center gap-1 font-normal text-[12px] md:text-[15px]'><img src={GmailImg} alt='my-img' />Gmail Account</div>
                         </li>
-                        <div className='rounded-md flex h-16 md:w-3/4 '>
-          <input type="text" placeholder='' className='text-sm md:text-md outline-none p-2 bg-white h-10 w-full focus:ring-1 focus:border-black' />
-            <Link to="/" className='bg-black text-white font-semibold text-sm md:text-md flex items-center justify-center w-48 h-10'>Start Trail</Link>
+                        <div className='rounded-md flex h-10 md:w-3/4  shadow-xl '>
+          <input type="text" placeholder='' className='rounded-l-md text-sm md:text-md outline-none p-2 bg-white h-10 w-full focus:ring-1 focus:border-black' />
+            <Link to="/" className='bg-black rounded-r-md text-white font-semibold text-sm md:text-md flex items-center justify-center w-48 h-10'>Start Trail</Link>
           </div>
-          <li className='mt-[-10px] flex items-center gap-1 font-normal text-[12px] md:text-[15px]'><img src={GooglestoreImg} alt="" />4,8 / 5 In the Google Chrome Store</li>
+          <li className='mt-[0px] flex items-center gap-1 font-normal text-[12px] md:text-[15px]'><img src={GooglestoreImg} alt="" />4,8 / 5 In the Google Chrome Store</li>
                     </ul>
                     </div>
                     <div className='md:w-1/2 flex justify-end items-end'><img src={Aimainimg} alt="" /></div>
@@ -110,7 +110,7 @@ export default function B2bdatabase() {
                             RightMessageAI.map((val, id) => {
                                 return (
                                     <div className='flex flex-col gap-1 text-center sm:text-start'>
-                                        <img src={val.img} alt="my-img" className='m-auto sm:ml-0' />
+                                        <img src={val.img} alt="my-img" className='m-auto ' />
                                         <h3 className='text-[15px] md:text-[17px] font-medium'>{val.title}</h3>
                                         <p className='text-[12px] md:text-[15px] text-para'>{val.para}</p>
                                         <ul className='flex flex-col '>

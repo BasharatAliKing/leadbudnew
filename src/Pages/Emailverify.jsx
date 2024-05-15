@@ -34,24 +34,45 @@ export default function Emailverify() {
   ]
   let Attributes=[
     {ques:"Accept-all", ans:"No"},
-    {ques:"Accept-all", ans:"No"},
-    {ques:"Accept-all", ans:"No"},
-    {ques:"Accept-all", ans:"No"},
-    {ques:"Accept-all", ans:"No"},
+    {ques:"Disposible", ans:"No"},
+    {ques:"Free", ans:"No"},
+    {ques:"Role", ans:"No"},
+    {ques:"Tag", ans:"No"},
   ]
   let MailServer=[
     {ques:"SMTP Provider", ans:"GOOGLE"},
-    {ques:"SMTP Provider", ans:"GOOGLE"},
+    {ques:"MX Record", ans:"aspmx.com"},
   ]
   const [search, setSearch] = useState('');
   const [datashow, setDatashow]=useState(true);
+  const [num, setNum]=useState(0);
   const handleChange = (e) => {
     setSearch(e.target.value);
     console.log(e.target.value);
   }
   const handleSubmit = (e) => {
     e.preventDefault();
-    setDatashow(false)
+    setDatashow(false);
+    const numval=parseInt(Math.random()*100);
+    console.log(numval);
+    setNum(numval);
+    document.querySelector(".upper-icon").style.marginLeft=numval+"%";
+    if(numval > 0 && numval <= 10){
+      document.querySelector(".upper-icon").style.backgroundColor="#4A44F4";
+      document.querySelector(".upper-icon").style.color="#FFFFFF";
+    }else if(numval > 10 && numval <= 30 ){
+      document.querySelector(".upper-icon").style.backgroundColor="#FF4646";
+      document.querySelector(".upper-icon").style.color="#FFFFFF";
+    }else if(numval >80 && numval <= 100){
+      document.querySelector(".upper-icon").style.backgroundColor="#56F444";
+      document.querySelector(".upper-icon").style.color="#000000"; 
+    }
+    else{
+      document.querySelector(".upper-icon").style.backgroundColor="#FFF713";
+      document.querySelector(".upper-icon").style.color="#000000";
+    }
+    
+    
     setSearch('');
   }
   const handleClose=(e)=>{
@@ -79,14 +100,16 @@ export default function Emailverify() {
           <div>
               <button onClick={handleClose}  className='ml-auto flex gap-1 items-center'><IoIosCloseCircleOutline className='text-[16px] md:text-[20px]' /> Close</button>
            
-          <div className='w-[100%] h-[2px] rounded-full flex mt-5 '>
-             <div className='bg-[#4A44F4] ml-[-5px] rounded-full w-[10%] h-[10px] text-transparent'>.</div>
-             <div className='bg-[#FF4646] ml-[-5px] rounded-r-full w-[20%] h-[10px] text-transparent'>.</div>
-             <div className='bg-[#56F444] ml-[-5px] rounded-r-full w-[55%] h-[10px] text-transparent'>.</div>
-             <div className='bg-[#FFF713] ml-[-5px] rounded-r-full w-[25%] h-[10px] text-transparent'>.</div>
+          <div className='w-[100%] h-[2px] rounded-full flex my-10 relative'>
+            <div className="upper-icon absolute z-10 top-[-30px] p-1 text-[12px] cursor-pointer h-6 w-6 flex items-center justify-center rounded-full ">{num}</div>
+             <div className='bg-[#4A44F4] ml-[-5px] rounded-full w-[15%] h-[10px] text-transparent relative'>.  <div className='absolute left-0 bottom-[-25px] text-black'>?</div> <div className='absolute right-0 bottom-[-25px] text-black'>10</div></div>
+             <div className='bg-[#FF4646] ml-[-5px] rounded-r-full w-[20%] h-[10px] text-transparent relative'>. <div className='absolute right-0 bottom-[-25px] text-black'>30</div></div>
+             <div className='bg-[#FFF713] ml-[-5px] rounded-r-full w-[55%] h-[10px] text-transparent relative'>. <div className='absolute right-0 bottom-[-25px] text-black'>80</div></div>
+             <div className='bg-[#56F444] ml-[-5px] rounded-r-full w-[25%] h-[10px] text-transparent relative'>.  <div className='absolute right-0 bottom-[-25px] text-black'>100</div></div>
           </div>
+          <div className='text-[13px] md:text-[16px] text-center font-medium'>Score</div>
           {/* table */}
-          <div className='grid grid-cols-1 mt-5 lg:grid-cols-3 bg-[#F5F5F5]'>
+          <div className='grid grid-cols-1 mt-5 lg:grid-cols-3 bg-[#F5F5F5] '>
             <div className='flex flex-col gap-3  border-l-0 border-b-2 border-r-0 lg:border-r-2  lg:border-b-0 border-t-0 p-3'>
                <h3 className='text-[17px] sm:text-[19px] font-semibold'>General</h3>
               <div>
