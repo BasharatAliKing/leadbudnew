@@ -56,25 +56,24 @@ export default function Emailverify() {
     const numval=parseInt(Math.random()*100);
     console.log(numval);
     setNum(numval);
-    document.querySelector(".upper-icon").style.marginLeft=numval+"%";
-    if(numval >= 0 && numval <= 10){
-      document.querySelector(".upper-icon").style.backgroundColor="#4A44F4";
-      document.querySelector(".upper-icon").style.color="#FFFFFF";
-    }else if(numval > 10 && numval <= 30 ){
-      document.querySelector(".upper-icon").style.backgroundColor="#FF4646";
-      document.querySelector(".upper-icon").style.color="#FFFFFF";
-    }else if(numval >80 && numval <= 100){
-      document.querySelector(".upper-icon").style.backgroundColor="#56F444";
-      document.querySelector(".upper-icon").style.color="#000000"; 
-    }
-    else{
-      document.querySelector(".upper-icon").style.backgroundColor="#FFF713";
-      document.querySelector(".upper-icon").style.color="#000000";
-    }
-    
-    
+    // document.querySelector(".upper-icon").style.marginLeft=numval+"%";
+    // if(numval >= 0 && numval <= 10){
+    //   document.querySelector(".upper-icon").style.backgroundColor="#4A44F4";
+    //   document.querySelector(".upper-icon").style.color="#FFFFFF";
+    // }else if(numval > 10 && numval <= 30 ){
+    //   document.querySelector(".upper-icon").style.backgroundColor="#FF4646";
+    //   document.querySelector(".upper-icon").style.color="#FFFFFF";
+    // }else if(numval >80 && numval <= 100){
+    //   document.querySelector(".upper-icon").style.backgroundColor="#56F444";
+    //   document.querySelector(".upper-icon").style.color="#000000"; 
+    // }
+    // else{
+    //   document.querySelector(".upper-icon").style.backgroundColor="#FFF713";
+    //   document.querySelector(".upper-icon").style.color="#000000";
+    // }
     setSearch('');
   }
+ 
   const handleClose=(e)=>{
     e.preventDefault();
     setDatashow(true);
@@ -101,7 +100,7 @@ export default function Emailverify() {
               <button onClick={handleClose}  className='ml-auto flex gap-1 items-center'><IoIosCloseCircleOutline className='text-[16px] md:text-[20px]' /> Close</button>
            
           <div className='w-[100%] h-[2px] rounded-full flex my-10 relative'>
-            <div className="upper-icon absolute z-10 top-[-30px] p-1 text-[12px] cursor-pointer h-6 w-6 flex items-center justify-center rounded-full ">{num}</div>
+            <div style={{marginLeft:num+'%', backgroundColor:(num>=0 &&num<10)?'#4A44F4':(num>10&&num<30)?'#FF4646':(num>30&&num<80)?'#FFF713':'#56F444', color:(num>=0 && num<30?'white':'black')}}  className="upper-icon absolute z-10 top-[-30px] p-1 text-[12px] cursor-pointer h-6 w-6 flex items-center justify-center rounded-full">{num}</div>
              <div className='bg-[#4A44F4] ml-[-5px] rounded-full w-[15%] h-[10px] text-transparent relative'>.  <div className='absolute left-0 bottom-[-25px] text-black'>?</div> <div className='absolute right-0 bottom-[-25px] text-black'>10</div></div>
              <div className='bg-[#FF4646] ml-[-5px] rounded-r-full w-[20%] h-[10px] text-transparent relative'>. <div className='absolute right-0 bottom-[-25px] text-black'>30</div></div>
              <div className='bg-[#FFF713] ml-[-5px] rounded-r-full w-[55%] h-[10px] text-transparent relative'>. <div className='absolute right-0 bottom-[-25px] text-black'>80</div></div>
