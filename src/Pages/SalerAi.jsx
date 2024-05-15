@@ -62,7 +62,7 @@ export default function B2bdatabase() {
                         <li className='flex flex-wrap items-center gap-2 text-[12px] md:text-[14px]'><FaCheckCircle className='text-[14px] md:text-[16px]' /> Next, I'll send them with your
                         <div className='flex items-center gap-1 font-normal text-[12px] md:text-[15px]'><img src={GmailImg} alt='my-img' />Gmail Account</div>
                         </li>
-                        <div className='rounded-md flex h-10 md:w-3/4  shadow-xl '>
+                        <div className='rounded-md flex h-10 md:w-3/4  shadow-xl shadow-[#505050] '>
           <input type="text" placeholder='' className='rounded-l-md text-sm md:text-md outline-none p-2 bg-white h-10 w-full focus:ring-1 focus:border-black' />
             <Link to="/" className='bg-black rounded-r-md text-white font-semibold text-sm md:text-md flex items-center justify-center w-48 h-10'>Start Trail</Link>
           </div>
