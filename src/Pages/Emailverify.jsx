@@ -57,7 +57,7 @@ export default function Emailverify() {
     console.log(numval);
     setNum(numval);
     document.querySelector(".upper-icon").style.marginLeft=numval+"%";
-    if(numval > 0 && numval <= 10){
+    if(numval >= 0 && numval <= 10){
       document.querySelector(".upper-icon").style.backgroundColor="#4A44F4";
       document.querySelector(".upper-icon").style.color="#FFFFFF";
     }else if(numval > 10 && numval <= 30 ){
