@@ -17,6 +17,24 @@
     flex-direction: row;
     max-height: calc(100vh - 70px);
 }
+.statetooltip-text{
+    display: none;
+}
+.state-tooltop:hover{
+   .statetooltip-text{
+    display: flex;
+    
+   }
+}
+.reasontooltip-text{
+    display: none;
+}
+.reason-tooltip:hover{
+   .reasontooltip-text{
+    display: flex;
+
+   }
+}
 @media (max-width:640px){
     .salesai{
         display: flex;
