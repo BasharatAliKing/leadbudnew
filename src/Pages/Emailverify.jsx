@@ -98,7 +98,7 @@ export default function Emailverify() {
                     <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> 
                     <div className='font-normal'>Gender</div>
                     <div className='font-light'>Male</div></div>
-                    <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> 
+                    <div title='Deliverable' className=' cursor-pointer flex items-center justify-between text-xs mt-1 md:text-[15px]'> 
                     <div className='font-normal'>State</div>
                     <div className='font-light'>Deliverable</div></div>
                     <div title={(num<30 && num >= 0)?"Rejected":(num<80 && num>30)?"Risky":"Acceptable"} className=' cursor-pointer flex items-center justify-between text-xs mt-1 md:text-[15px]'> 
