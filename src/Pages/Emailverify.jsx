@@ -110,7 +110,7 @@ export default function Emailverify() {
                               </div> : (num > 30 && num < 80) ?
                                 <div className='flex flex-col gap-1'>
                                   <h3 className='text-[13px] font-medium md:text-[15px]'>RiskFull</h3>
-                                  <p className='font-normal leading-snug'>Email Address may appear deliverable but should be used a quotient.</p>
+                                  <p className='font-normal leading-snug'>Email Address may appear deliverable but should be used a causion.</p>
                                 </div> : (num > 80 && num <= 100) ?
                                   <div className='flex flex-col gap-1'>
                                     <h3 className='text-[13px] font-medium md:text-[15px]'>Deliverable</h3>
@@ -133,7 +133,7 @@ export default function Emailverify() {
                               </div> : (num > 30 && num < 80) ?
                                 <div className='flex flex-col gap-1'>
                                 <h3 className='text-[13px] font-medium md:text-[15px]'>Risky</h3>
-                                <p className='font-normal leading-snug'>Email Address may appear Riskfull but email address should be used a quotient.</p>
+                                <p className='font-normal leading-snug'>Email Address may appear Riskfull but email address should be used a causion.</p>
                               </div>: (num > 80 && num <= 100) ?
                                   <div className='flex flex-col gap-1'>
                                     <h3 className='text-[13px] font-medium md:text-[15px]'>Acceptable</h3>
@@ -144,6 +144,7 @@ export default function Emailverify() {
                                     <p className='font-normal leading-snug'>Email address was Accepted by the mail server because it exist by the mail server.</p>
                              </div>
                             }
+                            
                           </div>
                           <div className='font-normal'>Reason</div>
                           <div className='font-light p-1 rounded-md' style={{ backgroundColor: (num > 0 && num < 30) ? '#ff4646bf' : (num > 30 && num < 80) ? '#fff7139e' : (num > 80 && num <= 100) ? '#56f44494' : '#56f44494', color: (num >= 0 && num < 30 ? 'white' : 'black') }}>  {(num < 30 && num >= 0) ? "Rejected" : (num < 80 && num > 30) ? "Risky" : "Acceptable"}</div>

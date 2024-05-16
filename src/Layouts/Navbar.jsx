@@ -19,12 +19,12 @@ export default function Navbar() {
     
       <ul className='hidden md:flex flex-col md:flex-row gap-4 md:ml-10 '>
                     <li className='leadbud-hov flex items-center gap-1 relative '><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link> <FaChevronDown/>
-                    <ul className='leadbud-submenu bg-white py-3 gap-2 rounded-md top-6 absolute'>
-                      <li><Link className='p-2 pr-8 hover:bg-green text-black font-medium' to="/b2bdatabase">Page-1</Link></li>
-                      <li><Link className='p-2 pr-8 hover:bg-green text-black font-medium' to="/emailfinder">Page-2</Link></li>
-                      <li><Link className='p-2 pr-8 hover:bg-green text-black font-medium' to="/emailverify">Page-3</Link></li>
-                      <li><Link className='p-2 pr-8 hover:bg-green text-black font-medium' to="/facebookpage">Page-4</Link></li>
-                      <li><Link className='p-2 pr-8 hover:bg-green text-black font-medium' to="/salesai">Page-5</Link></li>
+                    <ul className='leadbud-submenu  bg-white py-3 rounded-md top-6 absolute'>
+                      <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/b2bdatabase">B2BDatabase</Link></li>
+                      <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/emailfinder">Email-Finder</Link></li>
+                      <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/emailverify">Email-Verify</Link></li>
+                      <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/facebookpage">Facebook</Link></li>
+                      <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/salesai">SalesAI</Link></li>
                     </ul>
                     </li>
                     <li><Link className='font-medium text-sm' to="/">Solutions</Link></li>
@@ -44,11 +44,11 @@ export default function Navbar() {
         <ul className='flex flex-col gap-3 mx-auto text-center mt-5'>
         <li className='leadbud-hov flex items-center gap-1 relative '><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link> <FaChevronDown/>
                     <ul className='leadbud-submenu bg-white py-3 gap-2 rounded-md top-6 w-full absolute'>
-                      <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/b2bdatabase">Page-1</Link></li>
-                      <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/emailfinder">Page-2</Link></li>
-                      <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/emailverify">Page-3</Link></li>
-                     <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/facebookpage">Page-4</Link></li>
-                      <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/salesai">Page-5</Link></li>
+                      <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/b2bdatabase">B2BDatabase</Link></li>
+                      <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/emailfinder">Email-Finder</Link></li>
+                      <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/emailverify">Email-Verify</Link></li>
+                     <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/facebookpage">Facebook</Link></li>
+                      <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/salesai">SalesAI</Link></li>
                     </ul>
                     </li>
                       <li><Link onClick={toggleMenu} className='font-medium text-sm' to="/">Solutions</Link></li>
