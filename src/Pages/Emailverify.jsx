@@ -23,15 +23,7 @@ export default function Emailverify() {
     {img:Img2 , title:"Domain Verification", des:"Ensure emails are linked to valid domains, enhancing the reliability of your communication channels."},
     {img:Img3 , title:"Anti-Spam Checks", des:"Boost deliverability by avoiding spam traps, safeguarding your emails from being flagged as spam."},
   ]
-  let GeneralEmail=[
-    {ques:"Full Name", ans:"ABCD"},
-    {ques:"Gender", ans:"Male"},
-    {ques:"State", ans:"Deliverable"},
-    {ques:"Reason", ans:"Acceptable"},
-    {ques:"Domain", ans:"xyz.com"},
-    {ques:"User", ans:"XYZ."},
-    {ques:"Did you Mean ?", ans:"Did you Mean ?"},
-  ]
+ 
   let Attributes=[
     {ques:"Accept-all", ans:"No"},
     {ques:"Disposible", ans:"No"},
@@ -56,21 +48,7 @@ export default function Emailverify() {
     const numval=parseInt(Math.random()*100);
     console.log(numval);
     setNum(numval);
-    // document.querySelector(".upper-icon").style.marginLeft=numval+"%";
-    // if(numval >= 0 && numval <= 10){
-    //   document.querySelector(".upper-icon").style.backgroundColor="#4A44F4";
-    //   document.querySelector(".upper-icon").style.color="#FFFFFF";
-    // }else if(numval > 10 && numval <= 30 ){
-    //   document.querySelector(".upper-icon").style.backgroundColor="#FF4646";
-    //   document.querySelector(".upper-icon").style.color="#FFFFFF";
-    // }else if(numval >80 && numval <= 100){
-    //   document.querySelector(".upper-icon").style.backgroundColor="#56F444";
-    //   document.querySelector(".upper-icon").style.color="#000000"; 
-    // }
-    // else{
-    //   document.querySelector(".upper-icon").style.backgroundColor="#FFF713";
-    //   document.querySelector(".upper-icon").style.color="#000000";
-    // }
+   
     setSearch('');
   }
  
@@ -108,17 +86,35 @@ export default function Emailverify() {
           </div>
           <div className='text-[13px] md:text-[16px] text-center font-medium'>Score</div>
           {/* table */}
+      
           <div className='grid grid-cols-1 mt-5 lg:grid-cols-3 bg-[#F5F5F5] '>
             <div className='flex flex-col gap-3  border-l-0 border-b-2 border-r-0 lg:border-r-2  lg:border-b-0 border-t-0 p-3'>
                <h3 className='text-[17px] sm:text-[19px] font-semibold'>General</h3>
               <div>
-             {
-                GeneralEmail.map((val,id)=>{
-                    return  <div className='flex flex-col gap-3'>
-                    <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> <div className='font-normal'>{val.ques}</div><div className='font-light'>{val.ans}</div></div>
+             <div className='flex flex-col gap-3'>
+                    <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> 
+                    <div className='font-normal'>Full Name</div>
+                    <div className='font-light'>ABCD</div></div>
+                    <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> 
+                    <div className='font-normal'>Gender</div>
+                    <div className='font-light'>Male</div></div>
+                    <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> 
+                    <div className='font-normal'>State</div>
+                    <div className='font-light'>Deliverable</div></div>
+                    <div title={(num<30 && num >= 0)?"Rejected":(num<80 && num>30)?"Risky":"Acceptable"} className=' cursor-pointer flex items-center justify-between text-xs mt-1 md:text-[15px]'> 
+                    <div className='font-normal'>Reason</div>
+                    <div className='font-light flex items-center gap-1'> <div className='h-3 w-3 rounded-full text-transparent' style={{backgroundColor:(num>0 && num<30)?'#FF4646':(num>30 && num<80)?'#FFF713':(num>80 && num<=100)?'#56F444':'black'}}>.</div> {(num<30 && num >= 0)?"Rejected":(num<80 && num>30)?"Risky":"Acceptable"}</div></div>
+                    <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> 
+                    <div className='font-normal'>Domain</div>
+                    <div className='font-light'>xyz.com</div></div>
+                    <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> 
+                    <div className='font-normal'>User</div>
+                    <div className='font-light'>XYZ</div></div>
+                    <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> 
+                    <div className='font-normal'>Did you Mean</div>
+                    <div className='font-light'>Did You Mean ?</div></div>
                     </div>
-                })
-             }
+              
               </div>
             </div>
             <div className='flex flex-col gap-3 border-l-0 border-b-2 border-r-0 lg:border-r-2  lg:border-b-0 border-t-0 p-3'>
