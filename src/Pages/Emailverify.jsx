@@ -104,7 +104,7 @@ export default function Emailverify() {
                     <div className='font-light flex items-center gap-1'><div className='h-3 w-3 rounded-full' style={{color: deliverable ?'#56F444':'#FF4646'}}><FaCheckCircle/></div> Deliverable</div></div>
                     <div title={(num<30 && num >= 0)?"Rejected":(num<80 && num>30)?"Risky":"Acceptable"} className=' cursor-pointer flex items-center justify-between text-xs mt-1 md:text-[15px]'> 
                     <div className='font-normal'>Reason</div>
-                    <div className='font-light p-1 rounded-md'  style={{backgroundColor:(num>0 && num<30)?'#FF4646':(num>30 && num<80)?'#FFF713':(num>80 && num<=100)?'#56F444':'#56F444',color:(num>=0 && num<30?'white':'black')}}>  {(num<30 && num >= 0)?"Rejected":(num<80 && num>30)?"Risky":"Acceptable"}</div></div>
+                    <div className='font-light p-1 rounded-md'  style={{backgroundColor:(num>0 && num<30)?'#ff4646bf':(num>30 && num<80)?'#fff7139e':(num>80 && num<=100)?'#56f44494':'#56f44494',color:(num>=0 && num<30?'white':'black')}}>  {(num<30 && num >= 0)?"Rejected":(num<80 && num>30)?"Risky":"Acceptable"}</div></div>
                     <div className='flex items-center justify-between text-xs mt-1 md:text-[15px]'> 
                     <div className='font-normal'>Domain</div>
                     <div className='font-light'>xyz.com</div></div>
