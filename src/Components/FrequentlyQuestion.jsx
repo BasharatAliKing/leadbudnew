@@ -36,7 +36,7 @@ export default function FrequentlyQuestion() {
                                     */}
                                     <FaChevronDown className='text-green ml-3 sm:ml-0'/>
                                     </div> 
-                                    <div className='md:w-3/4 text-para text-[14px] md:text-[18px]'>{visibleIndex === index && <div className='mt-5'>{val.ans}</div>}</div>
+                                    <div className=' text-para text-[13px] md:text-[16px]'>{visibleIndex === index && <div className='mt-4'>{val.ans}</div>}</div>
                                 </div>
                             )
                         })
