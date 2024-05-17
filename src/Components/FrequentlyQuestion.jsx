@@ -30,13 +30,13 @@ export default function FrequentlyQuestion() {
                         Questions.map((val, index) => {
                             return (
                                 <div className='bg-white p-5 rounded-md shadow-md text-start'>
-                                    <div key={index} onClick={() => toggleAnswer(index)} className='flex items-center justify-between'>
-                                        <h5 className='text-sm sm:text-md md:text-lg font-medium'>{val.ques}</h5>
+                                    <div key={index} onClick={() => toggleAnswer(index)} className='flex  items-center justify-between'>
+                                        <h5 className='text-[17px] sm:text-[19px] md:text-[20px] font-medium'>{val.ques}</h5>
                                         {/* {icon ? <FaChevronDown className='text-green ml-3' /> : <FaChevronUp className='text-green ml-3' />}
                                     */}
                                     <FaChevronDown className='text-green ml-3 sm:ml-0'/>
                                     </div> 
-                                    <div className='md:w-3/4 text-para text-[13px] md:text-[16px] mt-1'>{visibleIndex === index && <div>{val.ans}</div>}</div>
+                                    <div className='md:w-3/4 text-para text-[14px] md:text-[18px]'>{visibleIndex === index && <div className='mt-5'>{val.ans}</div>}</div>
                                 </div>
                             )
                         })
