@@ -77,25 +77,26 @@ export default function Navbar() {
           {/* res navbar */}
           {
             open ? null :
-              <div className='flex flex-col  left-0 p-3 bg-bgmain overflow-y-scroll fixed h-[100%] w-[100%] top-10  md:hidden'>
+              <div className='flex flex-col  left-0 p-3 bg-bgmain overflow-y-scroll fixed h-[92%] w-[100%] top-10  md:hidden'>
                 <ul className='flex flex-col gap-3 text-start mt-5'>
-                  <li className='why-leadbud flex flex-col duration-700 gap-1'><div className='flex items-center gap-1 justify-between'><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link> <FaChevronDown className='text-[12px]' /></div>
-                    <ul className='leadbud-menu hidden bg-white py-3 gap-2 left-0 right-0 rounded-md top-14 mx-auto w-full'>
-                      <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/b2bdatabase">B2BDatabase</Link></li>
-                      <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/emailfinder">Email-Finder</Link></li>
-                      <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/emailverify">Email-Verify</Link></li>
-                      <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/facebookpage">Facebook</Link></li>
-                      <li><Link onClick={toggleMenu} className='p-2 pr-8 hover:bg-green text-black w-full font-medium' to="/salesai">SalesAI</Link></li>
+                  <li className='border border-b-black border-t-0 border-l-0 border-r-0 py-1 why-leadbud flex flex-col duration-700 gap-1'><div className='flex items-center gap-1 justify-between'><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link> <FaChevronDown className='text-[12px]' /></div>
+                    <ul className='leadbud-menu hidden   gap-3 left-0 right-0 rounded-md top-10'>
+                      <li><Link onClick={toggleMenu} className='py-2 mt-3 hover:bg-green text-sm text-black w-full font-medium' to="/b2bdatabase">B2BDatabase</Link></li>
+                      <li><Link onClick={toggleMenu} className='py-2 mt-3 hover:bg-green text-sm text-black w-full font-medium' to="/emailfinder">Email-Finder</Link></li>
+                      <li><Link onClick={toggleMenu} className='py-2 mt-3 hover:bg-green text-sm text-black w-full font-medium' to="/emailverify">Email-Verify</Link></li>
+                      <li><Link onClick={toggleMenu} className='py-2 mt-3 hover:bg-green text-sm text-black w-full font-medium' to="/facebookpage">Facebook</Link></li>
+                      <li><Link onClick={toggleMenu} className='py-2 mt-3 hover:bg-green text-sm text-black w-full font-medium' to="/salesai">SalesAI</Link></li>
                     </ul>
                   </li>
-                  <li className='solution-head flex gap-1 flex-col'><div className='flex items-center justify-between'><Link className='font-medium text-sm ' to="/">Solutions</Link><FaChevronDown className='text-[12px]' /></div>
-                    <div className="solution-menusub hidden bg-white p-5 sm:px-10 md:px-16 lg:px-20 gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 top-[90px] w-full left-0 z-30">
+                  <li className='border border-b-black border-t-0 border-l-0 border-r-0 py-1 solution-head flex gap-1 flex-col'><div className='flex items-center justify-between'><Link className='font-medium text-sm ' to="/">Solutions</Link><FaChevronDown className='text-[12px]' /></div>
+                    <div className='solution-menusub hidden'>
+                    <div className=" sm:px-10 md:px-16 lg:px-20 grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 top-[90px] w-full left-0 z-30">
                     <div className='hover:bg-[#5aed4c12]'>
                     {
                         solution.map((val, id) => {
                           return (
-                            <div className="flex flex-row gap-3 md:mr-12">
-                              <div className='text-[25px] mt-1 text-green text-start'>{val.img}</div>
+                            <div className="flex flex-row gap-3 md:mr-12 mt-3">
+                              <div className='text-[25px] mt-1 text-black text-start'>{val.img}</div>
                               <div className="media-body">
                                 <h5 className="mt-0 font-medium text-lg">{val.mediaheading}</h5>
                                 <Para1 para1={val.para} />
@@ -106,9 +107,10 @@ export default function Navbar() {
                       }
                     </div>
                     </div>
+                    </div>
                   </li>
-                  <li><Link onClick={toggleMenu} className='font-medium text-sm' to="/">Resources</Link></li>
-                  <li><Link onClick={toggleMenu} className='font-medium text-sm' to="/">Placing</Link></li>
+                  <li className='border border-b-black border-t-0 border-l-0 border-r-0 py-1 '><Link onClick={toggleMenu} className='font-medium text-sm' to="/">Resources</Link></li>
+                  <li className='border border-b-black border-t-0 border-l-0 border-r-0 py-1 '><Link onClick={toggleMenu} className='font-medium text-sm' to="/">Placing</Link></li>
                 </ul>
                 <div className='flex flex-col gap-3 text-center mt-3'>
                   <Link to="/" onClick={toggleMenu} className='text-center mx-auto'><Button2 btn2="Book a Call" /></Link>
