@@ -42,7 +42,7 @@ export default function Navbar() {
   return (
     <>
       <section className='bg-bgmain'>
-        <div className='container py-3 fixed md:sticky bg-bgmain flex items-center'>
+        <div style={{position:open?'sticky':'fixed'}} className='container py-3 bg-bgmain flex items-center'>
           <div className="logo"><img src={logo} alt="logo" /></div>
 
           <ul className='hidden md:flex flex-col md:flex-row gap-4 md:ml-10 '>
