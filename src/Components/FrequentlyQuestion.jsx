@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Heading1 from './Heading1'
 import Para1 from './Para1'
-import { FaChevronUp } from "react-icons/fa";
+
 import { FaChevronDown } from "react-icons/fa";
 export default function FrequentlyQuestion() {
 
@@ -12,7 +12,7 @@ export default function FrequentlyQuestion() {
         { id: 4, ques: "4. Can I Try Leadbud Before Purchasing A Subscription?", ans: "Leadbud Is A Comprehensive Lead Generation Tool Designed To Help Businesses Capture, Nurture, And Convert Leads Effectively. It Benefits Your Business By Simplifying Lead Generation Processes, Automating Tasks, And Providing Valuable Insights To Boost Your Sales And Growth." },
         { id: 5, ques: "5. How Can I Upgrade Or Change My Leadbud Subscription Plan?", ans: "Leadbud Is A Comprehensive Lead Generation Tool Designed To Help Businesses Capture, Nurture, And Convert Leads Effectively. It Benefits Your Business By Simplifying Lead Generation Processes, Automating Tasks, And Providing Valuable Insights To Boost Your Sales And Growth." },
     ];
-    const [icon, setIcon] = useState(true);
+  
     const [visibleIndex, setVisibleIndex] = useState(null);
     const toggleAnswer = (index) => {
         setVisibleIndex(visibleIndex === index ? null : index);

@@ -1,0 +1,17 @@
+.leadbud-submenu{
+    display: none
+}
+.leadbud-hov:hover{
+    .leadbud-submenu{
+        display: flex;
+        flex-direction: column
+    }
+}
+.solution-menu{
+    display: none;
+}
+.solution:hover{
+    .solution-menu{
+        display: grid;
+    }
+}

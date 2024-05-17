@@ -3,15 +3,7 @@
 *{
     font-family: "Poppins", sans-serif;
 }
-.leadbud-submenu{
-    display: none
-}
-.leadbud-hov:hover{
-    .leadbud-submenu{
-        display: flex;
-        flex-direction: column
-    }
-}
+
 .salesai{
     display: flex;
     flex-direction: row;
@@ -35,6 +27,7 @@
 
    }
 }
+
 @media (max-width:640px){
     .salesai{
         display: flex;
