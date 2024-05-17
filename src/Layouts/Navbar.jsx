@@ -11,6 +11,7 @@ import Mediaobject from '../Components/Mediaobject';
 import "../Utilities/Navbar.css";
 import { useEffect } from 'react';
 import $ from 'jquery';
+import Para1 from "../Components/Para1";
 export default function Navbar() {
   const [open, setOpen] = useState(true);
 
@@ -28,20 +29,20 @@ export default function Navbar() {
   ]
   useEffect(() => {
 
-    $(document).ready(function () {
-      $('.why-leadbud').click(function () {
-        $('.leadbud-menu').slideToggle(1000);
-      });
-      $('.solution-head').click(function () {
-        $('.solution-menusub').slideToggle(1000);
-      });
+    // $(document).ready(function () {
+    $('.why-leadbud').click(function () {
+      $('.leadbud-menu').slideToggle(1000);
     });
+    $('.solution-head').click(function () {
+      $('.solution-menusub').slideToggle(1000);
+    })
+    // })
 
-  }, []);
+  });
   return (
     <>
       <section className=' bg-bgmain'>
-        <div className='container py-3 fixed bg-bgmain md:sticky flex  items-center '>
+        <div className='container py-3 flex items-center'>
           <div className="logo"><img src={logo} alt="logo" /></div>
 
           <ul className='hidden md:flex flex-col md:flex-row gap-4 md:ml-10 '>
@@ -76,7 +77,7 @@ export default function Navbar() {
           {/* res navbar */}
           {
             open ? null :
-              <div className='flex flex-col z-40 left-0 p-3 bg-bgmain overflow-y-scroll fixed h-[100%] w-[100%] top-10  md:hidden'>
+              <div className='flex flex-col  left-0 p-3 bg-bgmain overflow-y-scroll fixed h-[100%] w-[100%] top-10  md:hidden'>
                 <ul className='flex flex-col gap-3 text-start mt-5'>
                   <li className='why-leadbud flex flex-col duration-700 gap-1'><div className='flex items-center gap-1 justify-between'><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link> <FaChevronDown className='text-[12px]' /></div>
                     <ul className='leadbud-menu hidden bg-white py-3 gap-2 left-0 right-0 rounded-md top-14 mx-auto w-full'>
@@ -89,11 +90,21 @@ export default function Navbar() {
                   </li>
                   <li className='solution-head flex gap-1 flex-col'><div className='flex items-center justify-between'><Link className='font-medium text-sm ' to="/">Solutions</Link><FaChevronDown className='text-[12px]' /></div>
                     <div className="solution-menusub hidden bg-white p-5 sm:px-10 md:px-16 lg:px-20 gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 top-[90px] w-full left-0 z-30">
-                      {
+                    <div className='hover:bg-[#5aed4c12]'>
+                    {
                         solution.map((val, id) => {
-                          return <Mediaobject img={val.img} mediaheading={val.mediaheading} para={val.para} />
+                          return (
+                            <div className="flex flex-row gap-3 md:mr-12">
+                              <div className='text-[25px] mt-1 text-green text-start'>{val.img}</div>
+                              <div className="media-body">
+                                <h5 className="mt-0 font-medium text-lg">{val.mediaheading}</h5>
+                                <Para1 para1={val.para} />
+                              </div>
+                            </div>
+                          )
                         })
                       }
+                    </div>
                     </div>
                   </li>
                   <li><Link onClick={toggleMenu} className='font-medium text-sm' to="/">Resources</Link></li>
