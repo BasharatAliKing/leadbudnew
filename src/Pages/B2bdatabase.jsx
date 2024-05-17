@@ -113,11 +113,11 @@ export default function B2bdatabase() {
       <BoxText heading1="Elevate Your Strategy: Take Action Now!" para="Seize the opportunity to transform your approach to success. Click now to unlock the full potential of our features and revolutionize your business strategy." btn1="Start to Free" />
     </section>
     {/* Slider logos here */}
-    <section className='container my-10'>
+    <section className='container my-10 z-0'>
       <Sliderlogos />
     </section>
     
-    <section className='container my-10 md:my-16'>
+    <section className='container my-10 md:my-16 z-0'>
       <CustomersSlider/>
     </section>
     <section className=' bg-[#F5F5F5]'>
