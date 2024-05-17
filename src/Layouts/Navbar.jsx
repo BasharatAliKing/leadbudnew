@@ -77,7 +77,7 @@ export default function Navbar() {
           {/* res navbar */}
           {
             open ? null :
-              <div className='flex flex-col  left-0 p-3 bg-bgmain overflow-y-scroll fixed h-[92%] w-[100%] top-10  md:hidden'>
+              <div className='flex flex-col  left-0 p-3 bg-bgmain overflow-y-scroll fixed h-[95%] w-[100%] top-10  md:hidden'>
                 <ul className='flex flex-col gap-3 text-start mt-5'>
                   <li className='border border-b-black border-t-0 border-l-0 border-r-0 py-1 why-leadbud flex flex-col duration-700 gap-1'><div className='flex items-center gap-1 justify-between'><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link> <FaChevronDown className='text-[12px]' /></div>
                     <ul className='leadbud-menu hidden   gap-3 left-0 right-0 rounded-md top-10'>
