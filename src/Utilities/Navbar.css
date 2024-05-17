@@ -15,3 +15,6 @@
         transform:.9s all;
     }
 }
+.main-dev{
+    scrollbar-width: none; 
+}
