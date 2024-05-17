@@ -1,10 +1,9 @@
-.leadbud-submenu{
+.leadbud-menu{
     display: none
 }
-.leadbud-hov:hover{
-    .leadbud-submenu{
-        display: flex;
-        flex-direction: column
+.leadbud:hover{
+    .leadbud-menu{
+        display: grid;
     }
 }
 .solution-menu{

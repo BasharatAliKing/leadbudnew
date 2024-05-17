@@ -14,10 +14,31 @@ import $ from 'jquery';
 import Para1 from "../Components/Para1";
 export default function Navbar() {
   const [open, setOpen] = useState(true);
+  const [leadbudsub,setLeadbudSub]=useState(true);
+  const [solutionsub,setSolutionSub]=useState(true)
 
+  const mouseEnter=(e)=>{
+   setLeadbudSub(false);
+  }
+  const mouseLeave=(e)=>{
+    setLeadbudSub(true);
+  }
+  const mouseEnterSolution=(e)=>{
+    setSolutionSub(false)
+  }
+  const mouseLeaveSolution=(e)=>{
+    setSolutionSub(true);
+  }
   const toggleMenu = () => {
     setOpen(true);
   }
+  const leadbud=[
+    {link:'/facebookpage',img:<FaGraduationCap className='text-[30px]' /> ,heading:'Prospecting', para:'intefrate Leadbuds Data Effortiessly into Your Marketing'},
+    {link:'/salesai',img:<FaGraduationCap className='text-[30px]' /> ,heading:'Artificial Intelligence', para:'intefrate Leadbuds Data Effortlessly into Your Marketing'},
+    {link:'/emailfinder',img:<FaGraduationCap className='text-[30px]' /> ,heading:'Email Finder', para:'intefrate Leadbuds Data Effortiessly into Your Marketing'},
+    {link:'/emailverify',img:<FaGraduationCap className='text-[30px]' /> ,heading:'Email Verifier', para:'intefrate Leadbuds Data Effortiessly into Your Marketing'},
+    {link:'/b2bdatabase',img:<FaGraduationCap className='text-[30px]' /> ,heading:'B2B Companies', para:'intefrate Leadbuds Data Effortiessly into Your Marketing'},
+  ]
   const solution = [
     { link:'/b2bdatabase', img: <FaGraduationCap className='text-[30px]' />, mediaheading: "Snovio Academy", para: "Expert Lead-crush cources on growing states." },
     { link:'/b2bdatabase', img: <FaGraduationCap className='text-[30px]' />, mediaheading: "Snovio Academy", para: "Expert Lead-crush cources on growing states." },
@@ -36,6 +57,7 @@ export default function Navbar() {
     $('.solution-head').click(function () {
       $('.solution-menusub').slideToggle(1000);
     })
+   
     // })
 
   });
@@ -46,7 +68,7 @@ export default function Navbar() {
           <div className="logo"><img src={logo} alt="logo" /></div>
 
           <ul className='hidden md:flex flex-col md:flex-row gap-4 md:ml-10 '>
-            <li className='py-3 leadbud-hov flex items-center gap-1 relative '><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link> <FaChevronDown className='text-[12px]' />
+            {/* <li className='py-3 leadbud-hov flex items-center gap-1 relative '><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link> <FaChevronDown className='text-[12px]' />
               <ul className='leadbud-submenu bg-white py-3 rounded-md top-12 absolute'>
                 <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/b2bdatabase">B2BDatabase</Link></li>
                 <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/emailfinder">Email-Finder</Link></li>
@@ -54,17 +76,34 @@ export default function Navbar() {
                 <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/facebookpage">Facebook</Link></li>
                 <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/salesai">SalesAI</Link></li>
               </ul>
-            </li>
-            <li className='py-3 solution flex items-center gap-1'><Link className='font-medium text-sm' to="/">Solutions </Link><FaChevronDown className='text-[12px]' />
-              <div className="solution-menu absolute  bg-white p-5 sm:px-10 md:px-16 lg:px-20 gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 top-[60px] w-full left-0 z-30">
+            </li> */}
+             <li onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} className='py-3 leadbud flex items-center gap-1'><Link className='font-medium text-sm' to="/">Why Leadbud </Link><FaChevronDown className='text-[12px]' />
+             {
+              leadbudsub ? null:
+              <div className=" absolute  bg-white p-5 sm:px-10 md:px-16 lg:px-20 grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 top-[60px] w-full left-0 z-30">
                 {
-                  solution.map((val, id) => {
+                  leadbud.map((val, id) => {
                  
-                    return    <Link to={val.link} className='hover:bg-[#4ae84d2f] p-3 cursor-pointer '><Mediaobject img={val.img} mediaheading={val.mediaheading} para={val.para} />
+                    return    <Link to={val.link} onClick={()=>{setLeadbudSub(true)}} className='main-menu hover:bg-[#4ae84d2f] p-3 cursor-pointer '><Mediaobject img={val.img} mediaheading={val.heading} para={val.para} />
                 </Link>
                   })
                 }
               </div>
+             }
+            </li>
+            <li onMouseEnter={mouseEnterSolution} onMouseLeave={mouseLeaveSolution} className='py-3 solution flex items-center gap-1'><Link className='font-medium text-sm' to="/">Solutions </Link><FaChevronDown className='text-[12px]' />
+             {
+              solutionsub?null:
+              <div className="solution-menu absolute  bg-white p-5 sm:px-10 md:px-16 lg:px-20 grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 top-[60px] w-full left-0 z-30">
+                  {
+                   solution.map((val, id) => {
+                 
+                 return    <Link onClick={()=>{setSolutionSub(true)}} to={val.link} className='hover:bg-[#4ae84d2f] p-3 cursor-pointer '><Mediaobject img={val.img} mediaheading={val.mediaheading} para={val.para} />
+             </Link>
+               })
+               }
+              </div>
+             }
             </li>
             <li className='py-3 '><Link className='font-medium text-sm' to="/">Resources</Link></li>
             <li className='py-3 '><Link className='font-medium text-sm' to="/">Placing</Link></li>
