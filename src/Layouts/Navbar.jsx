@@ -41,13 +41,13 @@ export default function Navbar() {
   });
   return (
     <>
-      <section className=' bg-bgmain'>
-        <div className='container py-3 flex items-center'>
+      <section className='bg-bgmain'>
+        <div className='container py-3 fixed md:sticky bg-bgmain flex items-center'>
           <div className="logo"><img src={logo} alt="logo" /></div>
 
           <ul className='hidden md:flex flex-col md:flex-row gap-4 md:ml-10 '>
-            <li className='leadbud-hov flex items-center gap-1 relative '><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link> <FaChevronDown className='text-[12px]' />
-              <ul className='leadbud-submenu bg-white py-3 rounded-md top-6 absolute'>
+            <li className='py-3 leadbud-hov flex items-center gap-1 relative '><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link> <FaChevronDown className='text-[12px]' />
+              <ul className='leadbud-submenu bg-white py-3 rounded-md top-12 absolute'>
                 <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/b2bdatabase">B2BDatabase</Link></li>
                 <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/emailfinder">Email-Finder</Link></li>
                 <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/emailverify">Email-Verify</Link></li>
@@ -55,23 +55,25 @@ export default function Navbar() {
                 <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/salesai">SalesAI</Link></li>
               </ul>
             </li>
-            <li className='solution flex items-center gap-1'><Link className='font-medium text-sm' to="/">Solutions </Link><FaChevronDown className='text-[12px]' />
-              <div className="solution-menu absolute bg-white p-5 sm:px-10 md:px-16 lg:px-20 gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 top-[45px] w-full left-0 z-30">
+            <li className='py-3 solution flex items-center gap-1'><Link className='font-medium text-sm' to="/">Solutions </Link><FaChevronDown className='text-[12px]' />
+              <div className="solution-menu absolute bg-white p-5 sm:px-10 md:px-16 lg:px-20 gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 top-[60px] w-full left-0 z-30">
                 {
                   solution.map((val, id) => {
-                    return <Mediaobject img={val.img} mediaheading={val.mediaheading} para={val.para} />
+                 
+                    return    <div className='hover:bg-[#4ae84d2f] p-3 cursor-pointer '><Mediaobject img={val.img} mediaheading={val.mediaheading} para={val.para} />
+                </div>
                   })
                 }
               </div>
             </li>
-            <li><Link className='font-medium text-sm' to="/">Resources</Link></li>
-            <li><Link className='font-medium text-sm' to="/">Placing</Link></li>
+            <li className='py-3 '><Link className='font-medium text-sm' to="/">Resources</Link></li>
+            <li className='py-3 '><Link className='font-medium text-sm' to="/">Placing</Link></li>
           </ul>
           <div className='hidden md:flex flex-col md:flex-row md:ml-auto gap-3'>
             <Link to="/"><Button2 btn2="Book a Call" /></Link>
             <Link to="/"><Button1 btn1="SignUp" /></Link>
           </div>
-          <div className='btn text-2xl ml-auto md:hidden' onClick={() => setOpen(!open)}>
+          <div className=' text-2xl ml-auto md:hidden' onClick={() => setOpen(!open)}>
             {open ? <IoReorderThreeOutline className='text-3xl' /> : <IoCloseSharp />}
           </div>
           {/* res navbar */}

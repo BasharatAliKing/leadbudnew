@@ -13,5 +13,6 @@
 .solution:hover{
     .solution-menu{
         display: grid;
+        transition: .9s;
     }
 }
