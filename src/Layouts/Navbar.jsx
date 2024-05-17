@@ -122,7 +122,7 @@ export default function Navbar() {
                 <ul className='flex flex-col gap-3 text-start mt-5'>
                   <li className='border border-b-black border-t-0 border-l-0 border-r-0 py-3 why-leadbud flex flex-col duration-700 gap-1'><div className='flex items-center gap-1 justify-between'><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link> <FaChevronDown className='text-[12px]' /></div>
                     <div className="leadbud-menu hidden">
-                    <ul className=' flex flex-col gap-1 left-0 right-0 rounded-md top-7'>
+                    <ul className=' flex flex-col gap-2'>
                       <li><Link onClick={toggleMenu} className='py-2 hover:bg-green text-sm text-black w-full font-medium' to="/b2bdatabase">B2BDatabase</Link></li>
                       <li><Link onClick={toggleMenu} className='py-2 hover:bg-green text-sm text-black w-full font-medium' to="/emailfinder">Email-Finder</Link></li>
                       <li><Link onClick={toggleMenu} className='py-2 hover:bg-green text-sm text-black w-full font-medium' to="/emailverify">Email-Verify</Link></li>
@@ -156,8 +156,8 @@ export default function Navbar() {
                   <li className='border border-b-black border-t-0 border-l-0 border-r-0 py-3 '><Link onClick={toggleMenu} className='font-medium text-sm' to="/">Placing</Link></li>
                 </ul>
                 <div className='flex flex-col gap-3 text-center mt-3'>
-                  <Link to="/" onClick={toggleMenu} className='text-center mx-auto text-[12px] border-2 border-black p-1 px-2 rounded-md hover:bg-black hover:text-white duration-700'>Book a Call</Link>
-                  <Link to="/" onClick={toggleMenu} className='text-center mx-auto text-[12px] rounded-md border-2 border-black bg-black text-white p-1 px-5 hover:bg-transparent hover:text-black duration-700'>SignUp</Link>
+                  <Link to="/" onClick={toggleMenu} className='text-center mx-auto text-sm border-2 border-black p-2 px-4 rounded-md hover:bg-black hover:text-white duration-700'>Book a Call</Link>
+                  <Link to="/" onClick={toggleMenu} className='text-center mx-auto text-sm rounded-md border-2 border-black bg-black text-white p-2 px-[31px] hover:bg-transparent hover:text-black duration-700'>SignUp</Link>
                 </div>
               </div>
           }
