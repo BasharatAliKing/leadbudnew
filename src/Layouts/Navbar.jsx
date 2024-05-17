@@ -71,7 +71,7 @@ export default function Navbar() {
             <Link to="/"><Button2 btn2="Book a Call" /></Link>
             <Link to="/"><Button1 btn1="SignUp" /></Link>
           </div>
-          <div className='text-2xl ml-auto md:hidden' onClick={() => setOpen(!open)}>
+          <div className='btn text-2xl ml-auto md:hidden' onClick={() => setOpen(!open)}>
             {open ? <IoReorderThreeOutline className='text-3xl' /> : <IoCloseSharp />}
           </div>
           {/* res navbar */}
