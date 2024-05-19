@@ -80,11 +80,11 @@ export default function Navbar() {
              <li onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} className='py-3 leadbud flex items-center gap-1'><Link className='font-medium text-sm' to="/">Why Leadbud </Link><FaChevronDown className='text-[12px]' />
              {
               leadbudsub ? null:
-              <div className=" absolute  bg-white p-5 sm:px-10 md:px-16 lg:px-20 grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 top-[60px] w-full left-0 z-30">
+              <div className="absolute bg-[#e9e9e9] shadow-xl rounded-md p-5 sm:px-10 md:px-16 lg:px-20 grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 top-[60px] w-full left-0 z-30">
                 {
                   leadbud.map((val, id) => {
                  
-                    return    <Link to={val.link} onClick={()=>{setLeadbudSub(true)}} className='main-menu hover:bg-[#4ae84d2f] p-3 cursor-pointer '><Mediaobject img={val.img} mediaheading={val.heading} para={val.para} />
+                    return    <Link to={val.link} onClick={()=>{setLeadbudSub(true)}} className='main-menu rounded-md hover:bg-[#4ae84d2f] p-3 cursor-pointer '><Mediaobject img={val.img} mediaheading={val.heading} para={val.para} />
                 </Link>
                   })
                 }
@@ -94,11 +94,11 @@ export default function Navbar() {
             <li onMouseEnter={mouseEnterSolution} onMouseLeave={mouseLeaveSolution} className='py-3 solution flex items-center gap-1'><Link className='font-medium text-sm' to="/">Solutions </Link><FaChevronDown className='text-[12px]' />
              {
               solutionsub?null:
-              <div className="solution-menu absolute  bg-white p-5 sm:px-10 md:px-16 lg:px-20 grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 top-[60px] w-full left-0 z-30">
+              <div className="solution-menu absolute rounded-md shadow-xl bg-[#e9e9e9] p-5 sm:px-10 md:px-16 lg:px-20 grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 top-[60px] w-full left-0 z-30">
                   {
                    solution.map((val, id) => {
                  
-                 return    <Link onClick={()=>{setSolutionSub(true)}} to={val.link} className='hover:bg-[#4ae84d2f] p-3 cursor-pointer '><Mediaobject img={val.img} mediaheading={val.mediaheading} para={val.para} />
+                 return    <Link onClick={()=>{setSolutionSub(true)}} to={val.link} className='hover:bg-[#4ae84d2f] rounded-md p-3 cursor-pointer '><Mediaobject img={val.img} mediaheading={val.mediaheading} para={val.para} />
              </Link>
                })
                }

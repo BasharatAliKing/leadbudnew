@@ -12,9 +12,12 @@
 .solution:hover{
     .solution-menu{
         display: grid;
-        transform:.9s all;
+        transition:.9s all;
     }
 }
 .main-dev{
     scrollbar-width: none; 
 }
+/* .main-subnavbar{
+    transition: max-height 0.5s ease-in-out;
+} */

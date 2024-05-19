@@ -61,7 +61,7 @@ export default function B2bdatabase() {
     </div>
     </section>
     <div className='lg:w-3/4 container mx-auto py-10 mt-[-120px] md:mt-[-150px]'>
-      <img src={FacebookImg} alt="my-img" />
+      <img src={FacebookImg} alt="my-img" width="100%" />
     </div>
      {/* Facebook post */}
      <section className='container flex flex-col md:flex-row my-10 md:my-16 gap-3'>
