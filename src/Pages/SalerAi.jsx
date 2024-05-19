@@ -64,7 +64,7 @@ export default function B2bdatabase() {
                         </li>
                         <div className='rounded-md flex h-10 md:w-3/4  shadow-lg shadow-[#505050] '>
           <input type="text" placeholder='' className='rounded-l-md text-sm md:text-md outline-none p-2 bg-white h-10 w-full focus:ring-1 focus:border-black' />
-            <Link to="/" className='bg-black rounded-r-md text-white font-semibold text-sm md:text-md flex items-center justify-center w-48 h-10'>Start Trail</Link>
+            <Link to="/" className='bg-black rounded-r-md text-white font-semibold text-sm md:text-md flex items-center justify-center w-48 h-10 duration-700 hover:bg-white border-2 border-black hover:text-black'>Start Trail</Link>
           </div>
           <li className='mt-[0px] flex items-center gap-1 font-normal text-[12px] md:text-[15px]'><img src={GooglestoreImg} alt="" />4,8 / 5 In the Google Chrome Store</li>
                     </ul>
