@@ -11,32 +11,33 @@ import Facebook from "./Pages/Facebook";
 import SalesAi from "./Pages/SalerAi";
 import Loading from "./Pages/Loading";
 export default function App() {
-  const [loading,setLoading]=useState(false);
-  const location = useLocation();
-  useEffect(()=>{
-    const handleStart =()=>{
-      setLoading(true);
-    }
-    const handleComplete = ()=>{
-      setLoading(false);
-    }
+  // const [loading,setLoading]=useState(false);
+  // const {location} = useLocation();
+  // useEffect(()=>{
+  //   const handleStart =()=>{
+  //     setLoading(true);
+  //   }
+  //   const handleComplete = ()=>{
+  //     setLoading(false);
+  //   }
 
-    handleStart();
+  //   handleStart();
 
-    const timeout = setTimeout(()=>
-    handleComplete(),1000);
-    return ()=>{
-      clearTimeout(timeout);
-    };
-  },[location]);
+  //   const timeout = setTimeout(()=>
+  //   handleComplete(),1000);
+  //   return ()=>{
+  //     clearTimeout(timeout);
+  //   };
+  // },[location]);
   return (
    
     <Router className="font-poppins">
         <Navbar/>
-        {
+        {/* {
           loading ? (
           <Loading/>
-        ): ( <Routes>
+        ): ( */}
+           <Routes>
         <Route exact path='/' Component={B2bdatabase}/>
         <Route exact path='/b2bdatabase' Component={B2bdatabase}/>
         <Route exact path='/emailfinder' Component={Emailfinder}/>
@@ -47,7 +48,7 @@ export default function App() {
         <Route exact path='/facebookpage' Component={Facebook}/>
         <Route exact path='/salesai' Component={SalesAi}/>
     </Routes>
-        )}
+        {/* )} */}
     </Router>
 
   )
