@@ -109,8 +109,8 @@ export default function Navbar() {
             <li className='py-3 '><Link className='font-medium text-sm' to="/">Placing</Link></li>
           </ul>
           <div className='hidden md:flex flex-col md:flex-row md:ml-auto gap-3'>
-            <Link to="/"><Button2 btn2="Book a Call" /></Link>
-            <Link to="/"><Button1 btn1="SignUp" /></Link>
+            <Link to="/" className='duration-700 hover:scale-105 bg-transparent border-2 px-5 py-2 text-[12px] md:text-[15px] flex font-normal border-black cursor-pointer items-center justify-center rounded-md'>Book a Call</Link>
+            <Link to="/" className='duration-700 hover:scale-105 bg-black px-5 py-2 text-[12px] md:text-[15px] flex items-center justify-center text-white rounded-md cursor-pointer'>SignUp</Link>
           </div>
           <div className=' text-2xl ml-auto md:hidden' onClick={() => setOpen(!open)}>
             {open ? <IoReorderThreeOutline className='text-3xl' /> : <IoCloseSharp />}
