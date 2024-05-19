@@ -2,11 +2,8 @@ import React from 'react'
 import Button1 from '../Components/Button1'
 import { HiMiniCheckBadge } from "react-icons/hi2";
 import FacebookImg from "../Utilities/FacebookImg.png"
-import BeyondImg from "../Utilities/beyondimg.png";
 import Heading1 from '../Components/Heading1';
-import Heading2 from '../Components/Heading2';
 import Para1 from '../Components/Para1';
-import Mediaobject from '../Components/Mediaobject';
 import Button3 from '../Components/Button3';
 import FrequentlyQuestion from '../Components/FrequentlyQuestion';
 import Footer from '../Layouts/Footer';

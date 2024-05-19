@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import logo from "../Utilities/logo.png";
-import Button1 from '../Components/Button1';
-import Button2 from '../Components/Button2';
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
@@ -12,10 +10,13 @@ import "../Utilities/Navbar.css";
 import { useEffect } from 'react';
 import $ from 'jquery';
 import Para1 from "../Components/Para1";
+
 export default function Navbar() {
   const [open, setOpen] = useState(true);
   const [leadbudsub,setLeadbudSub]=useState(true);
-  const [solutionsub,setSolutionSub]=useState(true)
+  const [solutionsub,setSolutionSub]=useState(true);
+
+  
 
   const mouseEnter=(e)=>{
    setLeadbudSub(false);

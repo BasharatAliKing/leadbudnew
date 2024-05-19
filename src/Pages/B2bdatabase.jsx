@@ -5,7 +5,6 @@ import HomeImg from "../Utilities/Leadbud Dashboard.png"
 import BeyondImg from "../Utilities/beyondimg.png";
 import Heading1 from '../Components/Heading1';
 import Heading2 from '../Components/Heading2';
-import Para1 from '../Components/Para1';
 import Mediaobject from '../Components/Mediaobject';
 import Button3 from '../Components/Button3';
 import Unveil1 from "../Utilities/Union 33.png";

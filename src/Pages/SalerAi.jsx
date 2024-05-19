@@ -86,7 +86,7 @@ export default function B2bdatabase() {
                         WorkingCara.map((val, id) => {
                             return (
                                 <div className='flex flex-col md:flex-row gap-3 mt-3'>
-                                    <img src={val.img} className='md:mb-auto mx-auto w-[20%] md:w-auto' alt="my-image" />
+                                    <img src={val.img} className='md:mb-auto mx-auto w-[20%] md:w-auto' alt="my-img" />
                                     <div className='text-center md:text-start'>
                                         <h4 className='text-[14px] md:text-[17px] font-medium'>{val.title}</h4>
                                         <p className='text-[12px] md:text-[15px] text-para'>{val.para}</p>
@@ -140,7 +140,7 @@ export default function B2bdatabase() {
                         DataConso.map((val, id) => {
                             return (
                                 <div className='flex flex-col md:flex-row gap-3 mt-3'>
-                                    <img src={val.img} className='md:mb-auto mx-auto w-[20%] md:w-auto' alt="my-image" />
+                                    <img src={val.img} className='md:mb-auto mx-auto w-[20%] md:w-auto' alt="my-img" />
                                     <div className='text-center md:text-start'>
                                         <h4 className='text-[14px] md:text-[17px] font-medium'>{val.title}</h4>
                                         <p className='text-[12px] md:text-[15px] text-para'>{val.para}</p>
