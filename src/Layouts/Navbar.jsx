@@ -12,12 +12,11 @@ import { useEffect } from 'react';
 import $ from 'jquery';
 import Para1 from "../Components/Para1";
 
-export default function Navbar() {
+export default function Navbar({btnclick}) {
   const [open, setOpen] = useState(true);
   const [leadbudsub,setLeadbudSub]=useState(true);
   const [solutionsub,setSolutionSub]=useState(true);
-
-  
+ 
 
   const mouseEnter=(e)=>{
    setLeadbudSub(false);
@@ -82,11 +81,11 @@ export default function Navbar() {
              <li onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} className='py-3 leadbud flex items-center gap-1'><Link className='font-medium text-sm' to="/">Why Leadbud </Link><FaChevronDown className='text-[12px]' />
              {
               leadbudsub ? null:
-              <div className="absolute bg-[#e9e9e9] shadow-xl rounded-md p-5 sm:px-10 md:px-16 lg:px-20 grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 top-[60px] w-full left-0 z-30">
+              <div  className="absolute bg-[#e9e9e9] shadow-xl rounded-md p-5 sm:px-10 md:px-16 lg:px-20 grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 top-[60px] w-full left-0 z-30">
                 {
                   leadbud.map((val, id) => {
                  
-                    return    <Link to={val.link} onClick={()=>{setLeadbudSub(true)}} className='main-menu rounded-md hover:bg-[#4ae84d2f] p-3 cursor-pointer '><Mediaobject img={val.img} mediaheading={val.heading} para={val.para} />
+                    return    <Link onClick={()=>{btnclick(true)}} to={val.link} className='main-menu rounded-md hover:bg-[#4ae84d2f] p-3 cursor-pointer '><Mediaobject img={val.img} mediaheading={val.heading} para={val.para} />
                 </Link>
                   })
                 }
@@ -100,15 +99,15 @@ export default function Navbar() {
                   {
                    solution.map((val, id) => {
                  
-                 return    <Link onClick={()=>{setSolutionSub(true)}} to={val.link} className='hover:bg-[#4ae84d2f] rounded-md p-3 cursor-pointer '><Mediaobject img={val.img} mediaheading={val.mediaheading} para={val.para} />
+                 return    <Link onClick={()=>btnclick(true)}  to={val.link} className='hover:bg-[#4ae84d2f] rounded-md p-3 cursor-pointer '><Mediaobject img={val.img} mediaheading={val.mediaheading} para={val.para} />
              </Link>
                })
                }
               </div>
              }
             </li>
-            <li className='py-3 '><Link className='font-medium text-sm' to="/">Resources</Link></li>
-            <li className='py-3 '><Link className='font-medium text-sm' to="/">Placing</Link></li>
+            <li onClick={()=>btnclick(true)} className='py-3 '><Link className='font-medium text-sm' to="/">Resources</Link></li>
+            <li onClick={()=>btnclick(true)} className='py-3 '><Link className='font-medium text-sm' to="/">Placing</Link></li>
           </ul>
           <div className='hidden md:flex flex-col md:flex-row md:ml-auto gap-3'>
             <Link to="/" className='duration-700 hover:scale-105 bg-transparent border-2 px-5 py-2 text-[12px] md:text-[15px] flex font-normal border-black cursor-pointer items-center justify-center rounded-md'>Book a Call</Link>

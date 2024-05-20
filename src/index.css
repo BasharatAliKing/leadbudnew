@@ -3,7 +3,13 @@
 *{
     font-family: "Poppins", sans-serif;
 }
-
+.loaderclass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width: 100%;
+}
 .salesai{
     display: flex;
     flex-direction: row;
