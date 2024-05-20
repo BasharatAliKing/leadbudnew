@@ -20,6 +20,7 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { RxQuestionMark } from "react-icons/rx";
 import { FaCheck } from "react-icons/fa6";
+import FadeLoader from "react-spinners/FadeLoader";
 export default function Emailverify() {
   let Divein = [
     { img: Img1, title: "Syntax Check", des: "Identify and eliminate errors with a thorough syntax examination, maintaining the integrity of your contact list." },
@@ -40,6 +41,7 @@ export default function Emailverify() {
   ]
   const [search, setSearch] = useState('');
   const [datashow, setDatashow] = useState(true);
+  const [loading,setLoading]=useState(false);
   const [num, setNum] = useState(0);
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -47,6 +49,10 @@ export default function Emailverify() {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true)
+    setTimeout(()=>{
+      setLoading(false)
+    },1000)
     setDatashow(false);
     const numval = parseInt(Math.random() * 100);
     console.log(numval);
@@ -61,6 +67,11 @@ export default function Emailverify() {
   }
   return (
     <>
+     {
+       loading ? 
+       <div className=' flex h-screen justify-center items-center'> <FadeLoader color="#56F444" /> </div>
+       : 
+      <>
       <section className='bg-bgmain bg-no-repeat  bg-center bg-cover  '>
         <div className='container flex flex-col gap-2 md:gap-3  py-10 pb-24 items-center justify-center'>
           <img src={EmailVerifyimg} alt="my-img" className='w-[30%]' />
@@ -237,7 +248,7 @@ export default function Emailverify() {
       </section>
       {/* Ignite Growth */}
       <section className='container'>
-        <div className=' bg-[#030621] rounded-md flex flex-col md:flex-row my-16 gap-3 text-white p-10'>
+        <div className=' bg-[#030621] shadow-lg rounded-md flex flex-col md:flex-row my-16 gap-3 text-white p-10'>
 
           <div className='md:w-1/2 md:p-10 flex flex-col gap-3 justify-center'>
             <Heading1 heading1="Ignite Growth: Seize Your Success Moment!" />
@@ -260,6 +271,8 @@ export default function Emailverify() {
         </div>
       </section>
       <Footer />
+      </>
+}
     </>
   )
 }

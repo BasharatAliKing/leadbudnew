@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect } from 'react'
 import Sliderlogos from '../Components/Sliderlogos';
 import CustomersSlider from '../Components/CustomersSlider';
 import FrequentlyQuestion from '../Components/FrequentlyQuestion';
@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 import Button3 from '../Components/Button3';
 import Button2 from '../Components/Button2';
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import FadeLoader from "react-spinners/FadeLoader";
 export default function Emailfinder() {
   let LostEmail = [
     { img: Img1, title: "Find Email By Domain", des: "Find all email addresses on any domain in a matter of minutes. Bulk domain option is handy if you want to explore up to 20,000 domains at a time." },
@@ -34,14 +35,7 @@ export default function Emailfinder() {
   const [datashow, setDatashow]=useState(false);
   const [email, setEmail] = useState('');
   const [emailArray, setEmailArray] = useState([]);
-
-  // const generateEmailArray = () => {
-  //   const newArray = [];
-  //   for (let i = 1; i <= 4; i++) {
-  //     newArray.push(email + i);
-  //   }
-  //   setEmailArray(newArray);
-  // };
+  const [loading,setLoading]=useState(false);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -50,6 +44,10 @@ export default function Emailfinder() {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true)
+    setTimeout(()=>{
+      setLoading(false)
+    },1000)
     setDatashow(true)
      setEmail('');
     const newArray = [];
@@ -69,6 +67,11 @@ export default function Emailfinder() {
   }
   return (
     <>
+    {
+       loading ? 
+       <div className=' flex h-screen justify-center items-center'> <FadeLoader color="#56F444" /> </div>
+       : 
+      <>
       <section className='bg-bgmain bg-no-repeat  bg-center bg-cover  '>
         <div className='container flex flex-col gap-2 md:gap-3 py-10 pb-24 items-center justify-center'>
           <img src={Emailfinderimg} alt="my-img" className='w-[30%]' />
@@ -104,7 +107,6 @@ export default function Emailfinder() {
         </div>
 
       </section>
-      {/* lost in the inbox */}
       <section className='bg-[#F5F5F5] mt-10'>
         <div className='container py-10'>
           <div className='lg:w-3/4 text-center mx-auto leading-snug'><Heading1 heading1="Lost In The Inbox Abyss? Our Email Finder Shines The Light!" /></div>
@@ -123,14 +125,12 @@ export default function Emailfinder() {
           </div>
         </div>
       </section>
-      {/* signup free */}
       <section className='bg-gradient-to-r from-[#56F444] via-[#55EE44] to-[#48FA8A] py-10'>
         <div className='container flex flex-col md:flex-row justify-between gap-3'>
           <div className='md:w-3/4 lg:w-2/4 leading-snug text-center sm:text-start'> <Heading1 heading1="Sign Up For Free To Get 50 Searches Every Month!" /></div>
           <Link to="/" className='my-auto justify-center sm:justify-start flex items-center'> <Button1 btn1="Start to Free" /></Link>
         </div>
-      </section>
-      {/* streamline connection */}
+      </section>   
       <section className='container flex flex-col md:flex-row my-16 gap-3'>
         <div className='md:w-1/2 md:p-10 flex flex-col gap-3'>
           <Heading1 heading1="Streamline Connections With Precision Emails" />
@@ -145,7 +145,6 @@ export default function Emailfinder() {
         </div>
         <div className='md:w-1/2 '><img src={Streamline} alt="" /></div>
       </section>
-      {/* streamline connection */}
       <section className=' bg-[#48fa893f] '>
         <div className='container flex flex-col md:flex-row py-10 gap-3'>
           <div className='md:w-1/2'><img src={DiscoverContact} alt="" /></div>
@@ -161,8 +160,6 @@ export default function Emailfinder() {
           </div>
         </div>
       </section>
-
-      {/* Slider logos here */}
       <section className='container my-10'>
         <Sliderlogos />
       </section>
@@ -175,6 +172,8 @@ export default function Emailfinder() {
         </div>
       </section>
       <Footer />
+      </>
+    }
     </>
   )
 }

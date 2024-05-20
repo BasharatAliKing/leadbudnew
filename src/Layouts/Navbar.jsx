@@ -50,17 +50,12 @@ export default function Navbar({btnclick}) {
     { link:'/b2bdatabase', img: <FaGraduationCap className='text-[30px]' />, mediaheading: "Snovio Academy", para: "Expert Lead-crush cources on growing states." },
   ]
   useEffect(() => {
-
-    // $(document).ready(function () {
     $('.why-leadbud').click(function () {
       $('.leadbud-menu').slideToggle(1000);
     });
     $('.solution-head').click(function () {
       $('.solution-menusub').slideToggle(1000);
     })
-   
-    // })
-
   });
   return (
     <>
@@ -69,15 +64,6 @@ export default function Navbar({btnclick}) {
           <div className="logo"><img src={logo} alt="logo" /></div>
 
           <ul className='hidden md:flex flex-col md:flex-row gap-4 md:ml-10 '>
-            {/* <li className='py-3 leadbud-hov flex items-center gap-1 relative '><Link className='font-medium text-sm' to="/b2bdatabase">Why Leadbud</Link> <FaChevronDown className='text-[12px]' />
-              <ul className='leadbud-submenu bg-white py-3 rounded-md top-12 absolute'>
-                <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/b2bdatabase">B2BDatabase</Link></li>
-                <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/emailfinder">Email-Finder</Link></li>
-                <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/emailverify">Email-Verify</Link></li>
-                <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/facebookpage">Facebook</Link></li>
-                <li className='w-full hover:bg-green p-1'><Link className='text-black font-medium' to="/salesai">SalesAI</Link></li>
-              </ul>
-            </li> */}
              <li onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} className='py-3 leadbud flex items-center gap-1'><Link className='font-medium text-sm' to="/">Why Leadbud </Link><FaChevronDown className='text-[12px]' />
              {
               leadbudsub ? null:
@@ -156,9 +142,9 @@ export default function Navbar({btnclick}) {
                   <li className='border border-b-black border-t-0 border-l-0 border-r-0 py-3 '><Link  onClick={()=>btnclick(true)} className='font-medium text-sm' to="/">Resources</Link></li>
                   <li className='border border-b-black border-t-0 border-l-0 border-r-0 py-3 '><Link  onClick={()=>btnclick(true)} className='font-medium text-sm' to="/">Placing</Link></li>
                 </ul>
-                <div className='flex flex-col gap-3 text-center mt-3'>
-                  <Link to="/"  onClick={()=>btnclick(true)} className='text-center mx-auto text-sm border-2 border-black p-2 px-4 rounded-md hover:bg-black hover:text-white duration-700'>Book a Call</Link>
-                  <Link to="/"  onClick={()=>btnclick(true)} className='text-center mx-auto text-sm rounded-md border-2 border-black bg-black text-white p-2 px-[31px] hover:bg-transparent hover:text-black duration-700'>SignUp</Link>
+                <div className='flex flex-col gap-3 text-center mt-auto'>
+                  <Link to="/"  onClick={()=>btnclick(true)} className='text-center  text-sm border-2 border-black p-2  rounded-md hover:bg-black hover:text-white duration-700'>Book a Call</Link>
+                  <Link to="/"  onClick={()=>btnclick(true)} className='text-center  text-sm rounded-md border-2 border-black bg-black text-white p-2 hover:bg-transparent hover:text-black duration-700'>SignUp</Link>
                 </div>
               </div>
           }
